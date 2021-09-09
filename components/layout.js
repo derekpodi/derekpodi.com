@@ -27,16 +27,16 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <header class="container bottom-6">
-        <div class="columns">
-          <div class="column">
-            <div class="navbar">
-              <div class="navbar-section">
+      <header className="container bottom-6">
+        <div className="columns">
+          <div className="column">
+            <div className="navbar">
+              <div className="navbar-section">
                 <h2>Navbar</h2>
               </div>
-              <div class="navbar-section">
+              <div className="navbar-section">
                 <h2>
-                  <span class="h2-normal">
+                  <span className="h2-normal">
                     ~ / 
                     <a href="/" title="Home"> Home</a>
                   </span>
