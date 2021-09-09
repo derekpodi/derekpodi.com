@@ -38,7 +38,9 @@ export default function Layout({ children, home }) {
                 <h2>
                   <span className="h2-normal">
                     ~ / 
-                    <a href="/" title="Home"> Home</a>
+                    <Link href="/">
+                      <a title="Home"> Home</a>
+                    </Link>
                   </span>
                 </h2>
               </div>
