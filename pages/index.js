@@ -25,12 +25,31 @@ export async function getServerSideProps(context) {
 }
 */
 
+/*
+//SWR - https://swr.vercel.app/docs/getting-started
+const fetcher = (...args) => fetch(...args).then(res => res.json())
+
+import useSWR from 'swr'
+
+function Profile () {
+  const { data, error } = useSWR('/api/user', fetcher)
+
+  if (error) return <div>failed to load</div>
+  if (!data) return <div>loading...</div>
+
+  // render data
+  return <div>hello {data.name}!</div>
+}
+*/
+
+
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
         <p>
