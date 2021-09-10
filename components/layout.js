@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Navbar from './navbar'
+import Footer from './footer'
 
 const name = 'Derek '
 export const siteTitle = 'Derek Podimatis'
@@ -27,27 +28,8 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <header className="container bottom-6">
-        <div className="columns">
-          <div className="column">
-            <div className="navbar">
-              <div className="navbar-section">
-                <h2>Navbar</h2>
-              </div>
-              <div className="navbar-section">
-                <h2>
-                  <span className="h2-normal">
-                    ~ / 
-                    <Link href="/">
-                      <a title="Home"> Home</a>
-                    </Link>
-                  </span>
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      
+      <Navbar />
 
       <header className={styles.header}>
         {home ? (
@@ -76,7 +58,11 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+
+      <Footer />
+
     </div>
   )
 }
+
 
