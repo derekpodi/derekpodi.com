@@ -7,7 +7,7 @@ import utilStyles from '../styles/utils.module.css'
 const Navbar = () => {
     return(
         <nav>
-            <header className="container bottom-6">
+            <header className="container">
                 <div className="columns">
                 <div className="column">
                     <div className="navbar">
@@ -34,3 +34,33 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
+
+
+/*
+    <header className={styles.header}>
+        {home ? (
+          <>
+            <h4>
+            <span className="h4-normal">
+                ~ / 
+                <Link href="/">
+                <a title="Home"> Home </a>
+                </Link>
+            </span>
+            </h4>
+          </>
+        ) : (
+          <>
+            <h4>
+            <span className="h4-normal">
+                ~ / 
+                <Link href="/">
+                <a title="Home"> Home /</a>
+                </Link>
+            </span>
+            </h4>
+          </>
+        )}
+    </header>
+*/
