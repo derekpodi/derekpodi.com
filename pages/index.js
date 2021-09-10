@@ -14,34 +14,6 @@ export async function getStaticProps() {
   }
 }
 
-/*
-//Server Side Rendering (API) - https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering
-export async function getServerSideProps(context) {
-  return {
-    props: {
-      // props for your component
-    }
-  }
-}
-*/
-
-/*
-//SWR - https://swr.vercel.app/docs/getting-started
-const fetcher = (...args) => fetch(...args).then(res => res.json())
-
-import useSWR from 'swr'
-
-function Profile () {
-  const { data, error } = useSWR('/api/user', fetcher)
-
-  if (error) return <div>failed to load</div>
-  if (!data) return <div>loading...</div>
-
-  // render data
-  return <div>hello {data.name}!</div>
-}
-*/
-
 
 export default function Home({ allPostsData }) {
   return (
@@ -76,3 +48,30 @@ export default function Home({ allPostsData }) {
     </Layout>
   )
 }
+
+
+/*
+//Server Side Rendering (API) - https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      // props for your component
+    }
+  }
+}
+
+//SWR - https://swr.vercel.app/docs/getting-started
+const fetcher = (...args) => fetch(...args).then(res => res.json())
+
+import useSWR from 'swr'
+
+function Profile () {
+  const { data, error } = useSWR('/api/user', fetcher)
+
+  if (error) return <div>failed to load</div>
+  if (!data) return <div>loading...</div>
+
+  // render data
+  return <div>hello {data.name}!</div>
+}
+*/
