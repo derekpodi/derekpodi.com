@@ -1,10 +1,8 @@
 import Link from 'next/link'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-
-
+import { useRouter } from 'next/router'
 
 const Navbar = () => {
+    const router = useRouter()
     return(
         <nav>
             <header className="container">
@@ -21,7 +19,15 @@ const Navbar = () => {
                             <Link href="/">
                             <a title="Home"> Home </a>
                             </Link>
-                            
+                            {router.pathname =='/' ? (
+                                <>
+                                    
+                                </>
+                            ) : (
+                                <>
+                                    {router.asPath}
+                                </>
+                             )} 
                         </span>
                         </h4>
                     </div>
@@ -36,31 +42,3 @@ const Navbar = () => {
 export default Navbar;
 
 
-
-/*
-    <header className={styles.header}>
-        {home ? (
-          <>
-            <h4>
-            <span className="h4-normal">
-                ~ / 
-                <Link href="/">
-                <a title="Home"> Home </a>
-                </Link>
-            </span>
-            </h4>
-          </>
-        ) : (
-          <>
-            <h4>
-            <span className="h4-normal">
-                ~ / 
-                <Link href="/">
-                <a title="Home"> Home /</a>
-                </Link>
-            </span>
-            </h4>
-          </>
-        )}
-    </header>
-*/
