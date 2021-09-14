@@ -31,22 +31,8 @@ export default function Layout({ children, home }) {
       
       <Navbar />
 
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <h2 className={utilStyles.heading2Xl}>{name}</h2>
-          </>
-        ) : (
-          <>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
 
+      <p></p>
 
       <main>{children}</main>
 

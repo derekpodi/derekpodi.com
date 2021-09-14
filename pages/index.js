@@ -39,6 +39,10 @@ export default function Home({ allPostsData }) {
                     <td>Name</td>
                     <td>Derek</td>
                   </tr>
+                  <tr>
+                    <td>Education</td>
+                    <td>[Add link here]</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
