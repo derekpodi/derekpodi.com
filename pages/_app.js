@@ -1,4 +1,6 @@
 import '../styles/globals.css'
+import '../styles/computer.css'
+
 /*
 import '../node_modules/spectre.css/dist/spectre.css'
 import '../node_modules/spectre.css/dist/spectre-exp.css'
