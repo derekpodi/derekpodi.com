@@ -23,23 +23,6 @@ export default function Home({ allPostsData }) {
       </Head>
       
       <section className={utilStyles.headingMd}>
-        <div>
-          <Link href={`/about`}>
-            <a>About</a>
-          </Link>
-        </div>
-        <p></p>
-        <div>
-          <Link href={`/notes`}>
-            <a>Notes</a>
-          </Link>
-        </div>
-        <p></p>
-        <div>
-          <Link href={`/media`}>
-            <a>Media</a>
-          </Link>
-        </div>
         <p></p>
         <p>[Your Self Introduction]</p>
         <p>

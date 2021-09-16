@@ -2683,19 +2683,31 @@ p.compact-line {
 
 .cols,
 .columns {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-left: -.4rem;
-  margin-right: -.4rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -.4rem;
+    margin-right: -.4rem;
 }
 
 .column {
-  -ms-flex: 1;
-  flex: 1;
-  max-width: 100%;
-  padding-left: .4rem;
-  padding-right: .4rem;
+    -ms-flex: 1;
+    flex: 1;
+    max-width: 100%;
+    padding-left: .4rem;
+    padding-right: .4rem;
 }
 
+.menu {
+    float: right;
+    margin-top: 0px;
+    margin-right: 100px;
+    text-align: right;
+    width: 100px;
+    font-family: "Myriad Pro", "Helvetica Neue", Helvetica;
+}
+
+.ul {
+    list-style-type: none;
+}

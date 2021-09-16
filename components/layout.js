@@ -3,6 +3,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Navbar from './navbar'
+import Menu from './menu'
 import Footer from './footer'
 
 const name = 'Derek '
@@ -31,6 +32,7 @@ export default function Layout({ children, home }) {
       
       <Navbar />
 
+      <Menu />
 
       <p></p>
 
