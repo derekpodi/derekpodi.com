@@ -23,57 +23,11 @@ export default function Home({ allPostsData }) {
       </Head>
       
       <section className={utilStyles.headingMd}>
-        <div className="container">
-          <h2>About</h2>
-          <div className="columns">
-            <div className="column">
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th>Personal Information</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Name</td>
-                    <td>Derek</td>
-                  </tr>
-                  <tr>
-                    <td>Education</td>
-                    <td>[Add link here]</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <p></p>
-          <div className="column">
-            <table className="table">
-                <thead>
-                  <tr>
-                    <th>Contact</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Email</td>
-                    <td>derek podi at gmail dot com</td>
-                  </tr>
-                  <tr>
-                    <td>Github</td>
-                    <td>
-                      <Link href="https://github.com/derekpodi">
-                        <a>derekpodi</a>
-                      </Link>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-          </div>  
+        <div>
+          <Link href={`/about`}>
+            <a>About</a>
+          </Link>
         </div>
-
         <p></p>
         <div>
           <Link href={`/notes`}>
