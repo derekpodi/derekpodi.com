@@ -15,6 +15,9 @@ const Menu = () => {
                     <Link href="/about"><a >About</a></Link>
                 </li>
                 <li>
+                    <Link href="/posts"><a >Posts</a></Link>
+                </li>
+                <li>
                     <Link href="/notes"><a >Notes</a></Link>
                 </li>
                 <li>
