@@ -20,8 +20,7 @@ const Media = ({ users }) => {
         <Layout Media>
             <div>
                 <h1>Media</h1>
-                <p>Testing testing 1 2 3</p>
-                <p>Testing testing 1 2 3</p>
+                <p>External API testing with dynamic pages - testing 123</p>
                 {users.map(users => (
                     <Link href={'/media/' + users.id} key={users.id}>
                         <a>
