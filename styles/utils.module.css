@@ -2702,7 +2702,7 @@ p.compact-line {
 .menu {
     float: right;
     margin-top: 0px;
-    margin-right: 100px;
+    margin-right: 0px;
     text-align: right;
     width: 100px;
     font-family: "Myriad Pro", "Helvetica Neue", Helvetica;
