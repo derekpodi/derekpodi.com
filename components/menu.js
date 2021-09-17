@@ -6,10 +6,27 @@ import utilStyles from '../styles/utils.module.css'
 
 
 const Menu = () => {
+    const router = useRouter()
+    const name = 'Derek '
+    
     return(
         
         <div className={utilStyles.menu}>
-            <span className={utilStyles.title}>Derek</span>
+            <span className={utilStyles.title}>
+            {router.pathname =='/' ? (
+                <>
+                    {name}
+                </>
+                ) : (
+                <>
+                    
+                    <Link href="/">
+                        <a className={utilStyles.colorInherit}>{name}</a>
+                    </Link>
+                    
+                </>
+                )}  
+            </span>
             <ul className={utilStyles.ul}>
                 <li>
                     <Link href="/about"><a >About</a></Link>
@@ -22,6 +39,9 @@ const Menu = () => {
                 </li>
                 <li>
                     <Link href="/media"><a >Media</a></Link>
+                </li>
+                <li>
+                    <Link href="/api/date"><a >Date</a></Link>
                 </li>
                 <li>
                     <Link href="/api/cow"><a >Cow</a></Link>
