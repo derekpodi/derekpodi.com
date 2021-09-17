@@ -42,7 +42,7 @@ export default function Layout({ children, home }) {
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            <a className={utilStyles["top-2"] + " " + utilStyles["btn"]+ " " + utilStyles["btn-sm"]+ " " + utilStyles["hover-white"]+ " " + utilStyles["hover-bg-black"]}>← Back to home</a>
           </Link>
         </div>
       )}
