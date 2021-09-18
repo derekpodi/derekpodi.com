@@ -108,8 +108,10 @@ header.container {
 }
 
 .container {
-    max-width: 800px;
-    margin: 0
+    max-width: 100%;
+    margin: 0rem 2rem;
+    padding-right: .4rem;
+    padding-left: .4rem;
 }
 
 .inline-block {
@@ -2710,4 +2712,38 @@ p.compact-line {
 
 .ul {
     list-style-type: none;
+}
+
+.btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff;
+    border: .1rem solid #000;
+    border-radius: .1rem;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: .9rem;
+    height: 1.8rem;
+    line-height: 1.2rem;
+    position:relative;
+    top:-2px;
+    outline: 0;
+    padding: .3rem .4rem .1rem .4rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background .2s, border .2s, box-shadow .2s, color .2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.btn-sm {
+    font-size: .8rem;
+    height: 1.4rem;
+    padding: .15rem .3rem;
 }
