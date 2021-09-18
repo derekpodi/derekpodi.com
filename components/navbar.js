@@ -1,12 +1,11 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 
-const name = 'Derek '
 
 const Navbar = () => {
     const router = useRouter()
+    const name = 'Derek'
     return(
         <header className={utilStyles["container"] + " " + utilStyles["bottom-6"]}>
             <div className={utilStyles["columns"]}>
@@ -14,7 +13,7 @@ const Navbar = () => {
                     <div className="navbar">
                         <div className="navbar-section">
                             
-                            <header className={styles.header}>
+                            <header className={utilStyles.header}>
                             {router.pathname =='/' ? (
                             <>
                                 <h2 className={utilStyles.headingLg}>{name}</h2>
@@ -31,25 +30,25 @@ const Navbar = () => {
                             </header>
                         </div>
                     
-                    <div className="navbar-section">
-                        <h4>
-                        <span className="h4-normal">
-                            ~ / 
-                            <Link href="/">
-                            <a title="Home"> Home </a>
-                            </Link>
-                            {router.pathname =='/' ? (
-                                <>
-                                    
-                                </>
-                            ) : (
-                                <>
-                                    {router.asPath}
-                                </>
-                            )} 
-                        </span>
-                        </h4>
-                    </div>
+                        <div className="navbar-section">
+                            <h4>
+                                <span className="h4-normal">
+                                    ~ / 
+                                    <Link href="/">
+                                    <a title="Home"> Home </a>
+                                    </Link>
+                                    {router.pathname =='/' ? (
+                                        <>
+                                            
+                                        </>
+                                    ) : (
+                                        <>
+                                            {router.asPath}
+                                        </>
+                                    )} 
+                                </span>
+                            </h4>
+                        </div>
                     </div>
                 </div>
             </div>
