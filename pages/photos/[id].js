@@ -6,8 +6,6 @@ import Image from 'next/image'
 export default function Post({ postData }) {
   return (
     <Layout>
-      {postData.title}
-      <br />
       {postData.id}
       <br />
       <Image src={"/photos/" + postData.id + ".jpeg"} width={400} height={400} />
