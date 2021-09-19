@@ -6,10 +6,10 @@ import Link from 'next/link'
 const About = () => {
     return (
         <Layout About>
-        <div className="container">
-          <h2>About</h2>
-          <div className={utilStyles["container"] + " " + utilStyles["bottom-1"]}>
-            <div className="column">
+        <div className={utilStyles.measure}>
+          <h4>About</h4>
+          <div>
+            <div >
               <table className="table">
                 <thead className={utilStyles["black"] + " " + utilStyles["bg--light-gray"]+ " " + utilStyles["ba"] + " " + utilStyles["b--black"]}>
                   <tr>
@@ -29,32 +29,32 @@ const About = () => {
                 </tbody>
               </table>
             </div>
+            <p></p>
+            <div>
+              <table className="table">
+                  <thead className={utilStyles["black"] + " " + utilStyles["bg--light-gray"]+ " " + utilStyles["ba"] + " " + utilStyles["b--black"]}>
+                    <tr>
+                      <th className={utilStyles["measure-12"]}>Contact</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Email</td>
+                      <td>derek podi at gmail dot com</td>
+                    </tr>
+                    <tr>
+                      <td>Github</td>
+                      <td>
+                        <Link href="https://github.com/derekpodi">
+                          <a>derekpodi</a>
+                        </Link>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>  
           </div>
-          <p></p>
-          <div className="column">
-            <table className="table">
-                <thead className={utilStyles["black"] + " " + utilStyles["bg--light-gray"]+ " " + utilStyles["ba"] + " " + utilStyles["b--black"]}>
-                  <tr>
-                    <th className={utilStyles["measure-12"]}>Contact</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Email</td>
-                    <td>derek podi at gmail dot com</td>
-                  </tr>
-                  <tr>
-                    <td>Github</td>
-                    <td>
-                      <Link href="https://github.com/derekpodi">
-                        <a>derekpodi</a>
-                      </Link>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-          </div>  
         </div>
         <p></p>
         </Layout>
