@@ -37,6 +37,9 @@ const Menu = () => {
                     <Link href="/notes"><a >Notes</a></Link>
                 </li>
                 <li>
+                    <Link href="/photos"><a >Photos</a></Link>
+                </li>
+                <li>
                     <Link href="/media"><a >Media</a></Link>
                 </li>
                 <li>
