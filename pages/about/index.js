@@ -11,7 +11,7 @@ const About = () => {
           <div>
             <div >
               <table className="table">
-                <thead className={utilStyles["black"] + " " + utilStyles["bg--light-gray"]+ " " + utilStyles["ba"] + " " + utilStyles["b--black"]}>
+                <thead className={utilStyles["black"] + " " + utilStyles["bg-light-gray"]+ " " + utilStyles["ba"] + " " + utilStyles["b--black"]}>
                   <tr>
                     <th className={utilStyles["measure-12"]}>Personal Information</th>
                     <th></th>
@@ -32,7 +32,7 @@ const About = () => {
             <p></p>
             <div>
               <table className="table">
-                  <thead className={utilStyles["black"] + " " + utilStyles["bg--light-gray"]+ " " + utilStyles["ba"] + " " + utilStyles["b--black"]}>
+                  <thead className={utilStyles["black"] + " " + utilStyles["bg-light-gray"]+ " " + utilStyles["ba"] + " " + utilStyles["b--black"]}>
                     <tr>
                       <th className={utilStyles["measure-12"]}>Contact</th>
                       <th></th>
