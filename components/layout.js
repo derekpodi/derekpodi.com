@@ -46,6 +46,7 @@ export default function Layout({ children, home }) {
         )}
         <div className={utilStyles.mt3}></div>
         <Footer />
+        <div className={utilStyles["bottom-2"]}></div>
       </footer>
 
     </div>
