@@ -32,12 +32,11 @@ export default function Layout({ children, home }) {
 
       <Menu />
       
-      
-      
 
-      <main>{children}</main>
+      <main className={utilStyles.mh5}>{children}</main>
 
-      <footer>
+
+      <footer className={`${utilStyles.mh5} ${utilStyles.mt4}`}>
         {!home && (
           <div className={utilStyles.backToHome}>
             <Link href="/">
@@ -45,7 +44,7 @@ export default function Layout({ children, home }) {
             </Link>
           </div>
         )}
-
+        <div className={utilStyles.mt3}></div>
         <Footer />
       </footer>
 
