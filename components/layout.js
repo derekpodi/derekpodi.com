@@ -33,14 +33,14 @@ export default function Layout({ children, home }) {
       <Menu />
       
 
-      <main className={utilStyles.mh5}>{children}</main>
+      <main className={utilStyles.mh3}>{children}</main>
 
 
-      <footer className={`${utilStyles.mh5} ${utilStyles.mt4}`}>
+      <footer className={`${utilStyles.mh3} ${utilStyles.mt4}`}>
         {!home && (
           <div className={utilStyles.backToHome}>
             <Link href="/">
-              <a className={utilStyles["top-2"] + " " + utilStyles["btn"]+ " " + utilStyles["btn-sm"] + " " + utilStyles["white"] + " " + utilStyles["bg-dark-green"] + " " + utilStyles["hover-white"]+ " " + utilStyles["hover-bg-black"]}>← Back to home</a>
+              <a className={utilStyles["top-2"] + " " + utilStyles["btn"]+ " " + utilStyles["btn-sm"] + " " + utilStyles["bg-dark-green"] + " " + utilStyles["white"] + " " + utilStyles["hover-white"]+ " " + utilStyles["hover-bg-black"]}>← Back to home</a>
             </Link>
           </div>
         )}

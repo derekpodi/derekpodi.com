@@ -255,12 +255,12 @@ a:focus,
 a:hover,
 a:active,
 a.active {
-  color: #002e6b;
+  color: #00449e;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #807fe2;
+  color: #00449e;
 }
 
 h1,
