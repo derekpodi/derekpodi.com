@@ -1,6 +1,8 @@
 import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/photos'
 import Image from 'next/image'
+import Link from 'next/link'
+import utilStyles from '../../styles/utils.module.css'
 import path from 'path'
 
 
@@ -14,17 +16,30 @@ export default function Post({ postData }) {
     <Layout>
       <div className="flex-centered">
         <br />
-        {postData.id}
-        <br />
-        {fullPath}
-        <br />
         <Image src={fullPath} width={600} height={600} alt={postData.id} />
         <br />
-        {postData.date}
       </div>
+      <footer className={`${utilStyles.mh3} ${utilStyles.mt4}`}>
+        <div className="flex-centered">
+          <Link href="/photos">
+            <a className={utilStyles["top-2"] + " " + utilStyles["btn"]+ " " + utilStyles["btn-sm"] + " " + utilStyles["bg-dark-green"] + " " + utilStyles["white"] + " " + utilStyles["hover-white"]+ " " + utilStyles["hover-bg-black"]}>← Back to photos</a>
+          </Link>
+        </div>
+        <div className={utilStyles.mt3}></div>
+        <div className={utilStyles["bottom-2"]}></div>
+      </footer>
     </Layout>
   )
 }
+
+/*
+<br />
+{postData.id}
+<br />
+{fullPath}
+<br />
+{postData.date}
+*/
 
 export async function getStaticPaths() {
   const paths = getAllPostIds()
