@@ -32,7 +32,7 @@ export default function Photos({ allPostsData }) {
                 <div className="column col-12 flex-centered">
                   <ul className={`${utilStyles.list} ${styles.ul}`}>
                     {allPostsData.map(({ id }) => (
-                      <li className={utilStyles.listItem} key={id}>
+                      <li className={styles.listItem} key={id}>
                       <Link href={`/photos/${id}`}>
                         <a><Image src={`/images/${id}.jpg`} width={283} height={283} alt={allPostsData.id} /> </a>
                       </Link>
