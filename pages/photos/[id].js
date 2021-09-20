@@ -18,7 +18,7 @@ export default function Post({ postData }) {
       <br />
       {fullPath}
       <br />
-      <Image src={fullPath} width={400} height={400} alt={postData.id} />
+      <Image src={fullPath} width={283} height={283} alt={postData.id} />
       <br />
       {postData.date}
     </Layout>
