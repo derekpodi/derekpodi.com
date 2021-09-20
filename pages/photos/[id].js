@@ -12,15 +12,16 @@ export default function Post({ postData }) {
 
   return (
     <Layout>
-      {postData.title}
-      <br />
-      {postData.id}
-      <br />
-      {fullPath}
-      <br />
-      <Image src={fullPath} width={283} height={283} alt={postData.id} />
-      <br />
-      {postData.date}
+      <div className="flex-centered">
+        <br />
+        {postData.id}
+        <br />
+        {fullPath}
+        <br />
+        <Image src={fullPath} width={600} height={600} alt={postData.id} />
+        <br />
+        {postData.date}
+      </div>
     </Layout>
   )
 }
