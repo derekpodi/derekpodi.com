@@ -6,8 +6,8 @@ import path from 'path'
 
 
 export default function Post({ postData }) {
-    const postsDirectory = path.join(process.cwd(), '/public/images')
-    const fileName = postData.id + ".jpeg"
+    const postsDirectory = path.join(process.cwd(), '/images')
+    const fileName = postData.id + ".jpg"
     const fullPath = path.join(postsDirectory, fileName)
 
   return (
@@ -18,7 +18,7 @@ export default function Post({ postData }) {
       <br />
       {fullPath}
       <br />
-      <Image src={fullPath} width={144} height={144} alt={postData.id} />
+      <Image src={fullPath} width={400} height={400} alt={postData.id} />
       <br />
       {postData.date}
     </Layout>
