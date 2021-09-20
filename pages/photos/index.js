@@ -28,8 +28,8 @@ export default function Photos({ allPostsData }) {
           <h2 className={utilStyles.headingLg}>Photos</h2>
           <article>
             <div className="container">
-              <div className="columns">
-                <div className="column col-12">
+              <div className="columns flex-centered">
+                <div className="column col-12 flex-centered">
                   <ul className={`${utilStyles.list} ${styles.ul}`}>
                     {allPostsData.map(({ id }) => (
                       <li className={utilStyles.listItem} key={id}>

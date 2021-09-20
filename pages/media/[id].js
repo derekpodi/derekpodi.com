@@ -1,4 +1,8 @@
 import Layout from '../../components/layout'
+import Link from 'next/link'
+import utilStyles from '../../styles/utils.module.css'
+
+
 
 //Tells Next how many HTML pages need to be made based on data
 export const getStaticPaths = async () => {
@@ -38,6 +42,15 @@ const Details  = ({ user }) => {
                 <p>{ user.website }</p>
                 <p>{ user.address.city }</p>
             </div>
+            <footer className={`${utilStyles.mt4}`}>
+                <div className="flex-left">
+                <Link href="/media">
+                    <a className={utilStyles["top-2"] + " " + utilStyles["btn"]+ " " + utilStyles["btn-sm"] + " " + utilStyles["bg-dark-green"] + " " + utilStyles["white"] + " " + utilStyles["hover-white"]+ " " + utilStyles["hover-bg-black"]}>← Back to media</a>
+                </Link>
+                </div>
+                <div className={utilStyles.mt3}></div>
+                <div className={utilStyles["bottom-2"]}></div>
+            </footer>
         </Layout>
     );
 }
