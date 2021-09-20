@@ -6,5 +6,11 @@
   -webkit-column-count: 3;
   -webkit-column-gap: 20px;
   column-count: 3;
-  column-gap: 20px;
+  column-gap: 30px;
+}
+
+.listItem {
+  margin: 0 0 2rem;
+  padding-left: 1rem;
+  padding-bottom: 1.5rem;
 }
