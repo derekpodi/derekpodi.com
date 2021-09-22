@@ -13,3 +13,4 @@ async def post_json(request, path=""):
     count = pd.DataFrame(df["To Grade"].value_counts())
     to_send = pd.DataFrame.to_json(count)
     return json(to_send)
+    
