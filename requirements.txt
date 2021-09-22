@@ -1,2 +1,3 @@
 cowpy==1.0.3
 numpy
+sanic==19.6.0
