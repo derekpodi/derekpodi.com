@@ -3,9 +3,11 @@ import Layout, { siteTitle } from '../../components/layout'
 import utilStyles from '../../styles/utils.module.css'
 import Link from 'next/link'
 
+/*
 function Form() {
     const registerUser = async event => {
         event.preventDefault()
+        console.log('You clicked submit.');
 
         const res = await fetch('/api/sanicjson', {
             body: JSON.stringify({
@@ -29,18 +31,25 @@ function Form() {
         </form>
     )
 }
+https://nextjs.org/blog/forms
+*/
 
 const Notes = () => {
     return (
         <Layout Notes>
-            <div>
+            <div> 
                 <h1>Notes</h1>
                 <p>Testing testing 1 2 3</p>
                 <p>Testing testing 1 2 3</p>
             </div>
             <br />
-            <Form />
+            <form action="/api/sanicjson" method="GET">
+            <label htmlFor="name">Stock </label>
+                <input type="text" name="name" />
+                <input type="submit" value="Submit" />
+            </form>
         </Layout>
+        
     );
 }
 
