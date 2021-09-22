@@ -5,6 +5,4 @@ yfinance
 plotly
 matplotlib
 sanic==19.6.0
-jupyter
-notebook
 pandas-datareader
