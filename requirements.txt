@@ -3,6 +3,4 @@ numpy
 pandas
 yfinance
 plotly
-matplotlib
 sanic==19.6.0
-pandas-datareader
