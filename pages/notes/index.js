@@ -43,7 +43,7 @@ const Notes = () => {
                 <p>Testing testing 1 2 3</p>
             </div>
             <br />
-            <form action="/api/sanicjson" method="GET">
+            <form action="/api/buy" method="GET">
             <label htmlFor="name">Stock </label>
                 <input type="text" name="name" />
                 <input type="submit" value="Submit" />
