@@ -1,7 +1,5 @@
 cowpy==1.0.3
-numpy
 pandas
 yfinance
 plotly
-matplotlib
 sanic==19.6.0
