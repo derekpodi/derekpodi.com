@@ -2,6 +2,8 @@ from sanic import Sanic
 from sanic.response import json
 app = Sanic()
 
-@app.route("/json")
-def post_json(request):
-    return json({ "received": True, "message": request.json })
+
+@app.route('/')
+@app.route('/<path:path>')
+async def post_json(request, path=""):
+    return json({"received": True, "message": request.json, 'hello': path})
