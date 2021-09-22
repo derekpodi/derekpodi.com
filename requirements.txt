@@ -1,5 +1,4 @@
 cowpy==1.0.3
 pandas
 yfinance
-matplotlib
 sanic==19.6.0
