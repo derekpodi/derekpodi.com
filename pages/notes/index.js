@@ -40,7 +40,7 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 
 function Profile () {
-    const url = `/api/buy`
+    const url = `https://api.github.com/users/derekpodi`
     const { data, error } = useSWR(url, fetcher)
   
     if (error) return <div>failed to load</div>
@@ -60,17 +60,21 @@ const Notes = () => {
                 <p>Testing testing 1 2 3</p>
             </div>
             <br />
-            <form action="/api/buy" method="GET">
+            
+            {/* <form action="/api/buy" method="GET">
             <label htmlFor="name">Stock </label>
                 <input type="text" name="name" />
                 <input type="submit" value="Submit" />
-            </form>
+            </form>   */}
+            
 
             <form action="/api/buy" >
             <label htmlFor="name">Stock </label>
                 <input type="text" name="name" autoComplete="name" required/>
                 <input type="submit" value="Submit" />
             </form>
+
+            <Profile />
         </Layout>
         
     );
