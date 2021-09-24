@@ -43,6 +43,9 @@ const Menu = () => {
                     <Link href="/media"><a >Media</a></Link>
                 </li>
                 <li>
+                    <Link href="/swr"><a >SWR</a></Link>
+                </li>
+                <li>
                     <Link href="/api/date"><a >Date</a></Link>
                 </li>
                 <li>
