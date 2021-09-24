@@ -17,7 +17,7 @@ function Profile () {
     if (!data) return <div>loading...</div>
   
     // render data
-    return <pre>{JSON.stringify(data, null, 2)}</pre>
+    return <pre className={utilStyles.mh5}>{JSON.stringify(data, null, 2)}</pre>
 }
 
 
@@ -26,9 +26,18 @@ const SWR = () => {
         <Layout SWR>
         
 
-            <Profile />
-
-
+            <Profile  />
+            
+            <br></br>
+            <h2> Youtube Embed</h2>
+            <div className="video-responsive">
+                <iframe src="https://www.youtube-nocookie.com/embed/ze8ycxc1UzE" width="..." height="..." frameborder="0" allowfullscreen></iframe>
+            </div>
+            <br></br>
+            <h2> Vimeo Embed</h2>
+            <div className="video-responsive">
+                <iframe src="https://player.vimeo.com/video/1084537?h=b1b3ab5aa2" width="..." height="..." frameborder="0" allowfullscreen></iframe>
+            </div>
         </Layout>
         
     );
