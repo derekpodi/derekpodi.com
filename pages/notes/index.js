@@ -35,32 +35,16 @@ function Form() {
 https://nextjs.org/blog/forms
 */
 
-const fetcher = (...args) => fetch(...args).then(res => res.json())
-
-
-
-function Profile () {
-    const url = `https://api.github.com/users/derekpodi`
-    const { data, error } = useSWR(url, fetcher)
-  
-    if (error) return <div>failed to load</div>
-    if (!data) return <div>loading...</div>
-  
-    // render data
-    return <pre>{JSON.stringify(data, null, 2)}</pre>
-}
-
-
 const Notes = () => {
     return (
         <Layout Notes>
             <div> 
                 <h1>Notes</h1>
                 <p>Testing testing 1 2 3</p>
-                <p>Testing testing 1 2 3</p>
+                <p>Enter a Stock Ticker - returns investment bank grades tally</p>
             </div>
             <br />
-            
+
             {/* <form action="/api/buy" method="GET">
             <label htmlFor="name">Stock </label>
                 <input type="text" name="name" />
@@ -73,8 +57,6 @@ const Notes = () => {
                 <input type="text" name="name" autoComplete="name" required/>
                 <input type="submit" value="Submit" />
             </form>
-
-            <Profile />
         </Layout>
         
     );
