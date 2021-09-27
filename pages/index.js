@@ -23,15 +23,12 @@ export default function Home({ allPostsData }) {
       </Head>
       
       <section className={utilStyles.headingMd}>
+        {/*TODO: ADD/Fix Landing Page*/}
         <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
       </section>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h2 className={utilStyles.headingLg}>Posts</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
@@ -53,8 +50,8 @@ export default function Home({ allPostsData }) {
 
 
 /*
-//Server Side Rendering (API) - https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering
-export async function getServerSideProps(context) {
+//Server Side Rendering (API) - https://nextjs.org/docs/basic-features/data-fetching#sideprops-server-side-rendering
+export async function SideProps(context) {
   return {
     props: {
       // props for your component

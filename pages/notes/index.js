@@ -40,10 +40,9 @@ const Notes = () => {
         <Layout Notes>
             <div> 
                 <h1>Notes</h1>
-                <p>Testing testing 1 2 3</p>
+                <br />
                 <p>Enter a Stock Ticker - returns investment bank grades tally</p>
             </div>
-            <br />
 
             {/* <form action="/api/buy" method="GET">
             <label htmlFor="name">Stock </label>
