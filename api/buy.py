@@ -1,7 +1,7 @@
 from sanic import Sanic
 from sanic import response
 from sanic.response import json
-#from sanic.response import html
+from sanic.response import html
 #from sanic.response import text
 app = Sanic()
 
@@ -21,14 +21,14 @@ async def post_json(request, path=""):
     count = pd.DataFrame(df["To Grade"].value_counts())
 
     #JSON return
-    to_send_json = pd.DataFrame.to_json(count)
-    fix = json.dumps(json.JSONDecoder().decode(to_send_json), indent=4)
-    return response.json(fix)
+    #to_send_json = pd.DataFrame.to_json(count)
+    #fix = json.dumps(json.JSONDecoder().decode(to_send_json), indent=4)
+    #return response.json(fix)
 
 
     #HTML retun
-    #to_send_html = pd.DataFrame.to_html(count)
-    #return html(to_send_html)
+    to_send_html = pd.DataFrame.to_html(count)
+    return html(to_send_html)
     
     #YF return
     #return json(ticker.info)

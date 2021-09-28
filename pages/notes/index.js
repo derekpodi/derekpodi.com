@@ -2,7 +2,29 @@ import Head from 'next/head'
 import Layout, { siteTitle } from '../../components/layout'
 import utilStyles from '../../styles/utils.module.css'
 import Link from 'next/link'
-import useSWR from 'swr'
+
+
+const Notes = () => {
+    return (
+        <Layout Notes>
+            <div> 
+                <h1>Notes</h1>
+                <br />
+                <p>Enter a Stock Ticker - returns investment bank grades tally</p>
+            </div>            
+            <form action="/api/buy" >
+            <label htmlFor="name">Stock </label>
+                <input type="text" name="name" autoComplete="name" required/>
+                <input type="submit" value="Submit" />
+            </form>
+        </Layout>
+        
+    );
+}
+
+export default Notes;
+
+
 
 /*
 function Form() {
@@ -33,32 +55,11 @@ function Form() {
     )
 }
 https://nextjs.org/blog/forms
-*/
 
-const Notes = () => {
-    return (
-        <Layout Notes>
-            <div> 
-                <h1>Notes</h1>
-                <br />
-                <p>Enter a Stock Ticker - returns investment bank grades tally</p>
-            </div>
 
-            {/* <form action="/api/buy" method="GET">
+            <form action="/api/buy" method="GET">
             <label htmlFor="name">Stock </label>
                 <input type="text" name="name" />
                 <input type="submit" value="Submit" />
-            </form>   */}
-            
-
-            <form action="/api/buy" >
-            <label htmlFor="name">Stock </label>
-                <input type="text" name="name" autoComplete="name" required/>
-                <input type="submit" value="Submit" />
-            </form>
-        </Layout>
-        
-    );
-}
-
-export default Notes;
+            </form>   
+*/
