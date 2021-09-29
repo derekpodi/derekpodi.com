@@ -1,9 +1,21 @@
+import { useRouter } from 'next/router'
+
+
 const Footer = () => {
+    const router = useRouter()
+
     return(
         <footer className="top-8">
-            <small>
-            © Copyright 2021, Derek.
-            </small>
+            {router.pathname =='/' ? (
+                <>
+                </>
+                ) : (
+                <>
+                    <small>
+                         © Copyright 2021, Derek.
+                    </small>
+                </>
+                )}
         </footer>
     );
 }
