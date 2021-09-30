@@ -19,6 +19,7 @@ export default function Posts({ allPostsData }) {
     return (
       <Layout Posts>
         <div className={utilStyles["measure-wide"]}>
+        <h4>Posts</h4>
           <div >
             <table className="table">
               <thead className={utilStyles["black"] + " " + utilStyles["bg-light-gray"]+ " " + utilStyles["ba"] + " " + utilStyles["b--black"]}>
