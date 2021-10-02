@@ -21,7 +21,24 @@ function Profile () {
 }
 
 
-const SWR = () => {
+export async function getServerSideProps() {
+    // Fetch data from external API
+    const url = `https://jsonplaceholder.typicode.com/albums`
+    const res = await fetch(url)
+    const data = await res.json()
+  
+    // Pass data to the page via props
+    return { 
+        props: {
+             data 
+        } 
+    }
+  }
+
+
+const SWR = ({ data }) => {
+    const { results = [] } = data;
+    console.log(data, )
     return (
         <Layout SWR>
             <p>
@@ -30,7 +47,29 @@ const SWR = () => {
             </p>
 
             <Profile  />
-            
+
+
+            <ul className="grid">
+                <li className="card">
+                    <a href="https://nextjs.org/learn">
+                        <h3>Test</h3>
+                    </a>
+                </li>
+                {results.map(result => {
+                    const { id, title } = result;
+
+                    return (
+                        <li key={id} className="card">
+                            <a href="https://nextjs.org/learn">
+                                <h3>{ title }</h3>
+                            </a>
+                        </li>
+                    )
+                })}
+                
+            </ul>
+
+
             <br></br>
             <h2> Youtube Embed</h2>
             <div className="video-responsive">
