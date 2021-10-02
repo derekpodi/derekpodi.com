@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../../components/layout'
 import utilStyles from '../../styles/utils.module.css'
+import styles from '../../styles/swr.module.css'
 import Link from 'next/link'
 import useSWR from 'swr'
 
@@ -47,10 +48,10 @@ const SWR = ({ albums }) => {
             <Profile  />
 
 
-            <ul className="grid">
+            <ul className={styles.grid}>
                 {albums.map(albums => {
                     return (
-                        <li key={albums.id} className="card">
+                        <li key={albums.id} className={styles.card}>
                             <a href="https://nextjs.org/learn">
                                 <h3>{ albums.title }</h3>
                             </a>
