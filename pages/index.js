@@ -22,27 +22,12 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       
+      {/*TODO: ADD/Fix Landing Page
       <section className={utilStyles.headingMd}>
-        {/*TODO: ADD/Fix Landing Page*/}
+        
         <p>[Your Self Introduction]</p>
       </section>
-
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Posts</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-            <Link href={`/posts/${id}`}>
-              <a>{title}</a>
-            </Link>
-            <br />
-            <small className={utilStyles.lightText}>
-              <Date dateString={date} />
-            </small>
-          </li>
-          ))}
-        </ul>
-      </section>
+      */}
 
     </Layout>
   )
@@ -57,20 +42,5 @@ export async function SideProps(context) {
       // props for your component
     }
   }
-}
-
-//SWR - https://swr.vercel.app/docs/getting-started
-const fetcher = (...args) => fetch(...args).then(res => res.json())
-
-import useSWR from 'swr'
-
-function Profile () {
-  const { data, error } = useSWR('/api/user', fetcher)
-
-  if (error) return <div>failed to load</div>
-  if (!data) return <div>loading...</div>
-
-  // render data
-  return <div>hello {data.name}!</div>
 }
 */
