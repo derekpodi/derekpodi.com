@@ -30,15 +30,13 @@ export async function getServerSideProps() {
     // Pass data to the page via props
     return { 
         props: {
-             data 
+             albums: data 
         } 
     }
   }
 
 
-const SWR = ({ data }) => {
-    const { results = [] } = data;
-    console.log(data, )
+const SWR = ({ albums }) => {
     return (
         <Layout SWR>
             <p>
@@ -50,18 +48,11 @@ const SWR = ({ data }) => {
 
 
             <ul className="grid">
-                <li className="card">
-                    <a href="https://nextjs.org/learn">
-                        <h3>Test</h3>
-                    </a>
-                </li>
-                {results.map(result => {
-                    const { id, title } = result;
-
+                {albums.map(albums => {
                     return (
-                        <li key={id} className="card">
+                        <li key={albums.id} className="card">
                             <a href="https://nextjs.org/learn">
-                                <h3>{ title }</h3>
+                                <h3>{ albums.title }</h3>
                             </a>
                         </li>
                     )
