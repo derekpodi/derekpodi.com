@@ -2747,3 +2747,8 @@ p.compact-line {
     height: 1.4rem;
     padding: .15rem .3rem;
 }
+
+.center {
+    margin: auto;
+    width: 50%;
+  }

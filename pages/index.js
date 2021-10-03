@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import Image from 'next/image'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -23,10 +24,21 @@ export default function Home({ allPostsData }) {
       </Head>
       
       {/*TODO: ADD/Fix Landing Page
+
       <section className={utilStyles.headingMd}>
         
         <p>[Your Self Introduction]</p>
       </section>
+      
+      <section className={utilStyles.center}>
+        <Image 
+          src="/../public/" 
+          alt="landing page image" 
+          width={500} 
+          height={500}
+        />
+      </section>
+
       */}
 
     </Layout>
