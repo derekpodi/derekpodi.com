@@ -242,7 +242,7 @@ body {
 }
 
 a {
-  color: #0864c7;   /* 00449e */
+  color: #0000FF;   /* 0864c7 (neil) , 00449e (original) , 0000FF (reddit) , 1D9BF0 (twitter) */
   outline: 0;
   text-decoration: none;
 }
@@ -255,12 +255,12 @@ a:focus,
 a:hover,
 a:active,
 a.active {
-  color: #0864c7;   /* 00449e */
+  color: #0000FF;   /* 0864c7 (neil) , 00449e (original) , 0000FF (reddit) , 1D9BF0 (twitter) */
   text-decoration: underline;
 }
 
 a:visited {
-  color: #0864c7;   /* 00449e */
+  color: #0000FF;   /* 0864c7 (neil) , 00449e (original) , 0000FF (reddit) , 1D9BF0 (twitter) */
 }
 
 h1,
