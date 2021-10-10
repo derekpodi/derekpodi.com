@@ -24,7 +24,8 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       
-      <Component />
+      {/* <Component /> */}
+
       {/*TODO: ADD/Fix Landing Page
 
       <section className={utilStyles.headingMd}>
