@@ -31,7 +31,7 @@ const Menu = () => {
                     <Link href="/about"><a >About</a></Link>
                 </li>
                 <li>
-                    <Link href="/posts"><a >Posts</a></Link>
+                    <Link href="/posts"><a >Blog</a></Link>
                 </li>
                 <li>
                     <Link href="/notes"><a >Notes</a></Link>
