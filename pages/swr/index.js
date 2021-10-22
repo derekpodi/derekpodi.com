@@ -41,6 +41,9 @@ const SWR = ({ albums }) => {
     return (
         <Layout SWR>
             <p>
+                This page tests many different features within NextJS. Examples of embedded links, json data, and videos. Stale-while-revaluate (SWR) is a strategy to first return the data from cache (stale), then send the fetch request (revalidate)
+            </p>
+            <p>
                 (This is a sample website - you’ll be building a site like this on{' '}
                 <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
             </p>
