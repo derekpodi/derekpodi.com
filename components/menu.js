@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import utilStyles from '../styles/utils.module.css'
@@ -47,9 +48,6 @@ const Menu = () => {
                 </li>
                 <li>
                     <Link href="/api/date"><a >Date</a></Link>
-                </li>
-                <li>
-                    <Link href="/api/cow"><a >Cow</a></Link>
                 </li>
             </ul>
         </div>
