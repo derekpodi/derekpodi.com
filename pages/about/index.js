@@ -20,7 +20,7 @@ const About = () => {
                 <tbody>
                   <tr>
                     <td>Name</td>
-                    <td>Derek</td>
+                    <td>Derek Podimatis</td>
                   </tr>
                   <tr>
                     <td>Education</td>
@@ -41,7 +41,7 @@ const About = () => {
                   <tbody>
                     <tr>
                       <td>Email</td>
-                      <td>derek podi at gmail dot com</td>
+                      <td>derekpodi at gmail dot com</td>
                     </tr>
                     <tr>
                       <td>Github</td>
