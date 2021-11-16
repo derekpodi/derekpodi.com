@@ -11,7 +11,7 @@ const Menu = () => {
     
     return(
         
-        <div className={`${utilStyles.menu} ${utilStyles.pa3}`}>
+        <div className={`${utilStyles.menu} ${utilStyles.pa3} ${utilStyles.ma4}`}>
             <span className={utilStyles.title}>
             {router.pathname =='/' ? (
                 <>
