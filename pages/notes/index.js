@@ -10,13 +10,18 @@ const Notes = () => {
             <div> 
                 <h1>Notes</h1>
                 <br />
-                <p>Enter a Stock Ticker - returns investment bank grades tally</p>
-            </div>            
+                <p>* Commented Out API Button Element * </p>
+                <p>Testing Serverless function size with deployment</p>
+
+                {/* <p>Enter a Stock Ticker - returns investment bank grades tally</p> */}
+            </div>
+            {/*            
             <form action="/api/buy" >
             <label htmlFor="name">Stock </label>
                 <input type="text" name="name" autoComplete="name" required/>
                 <input type="submit" value="Submit" />
             </form>
+            */}
         </Layout>
         
     );
