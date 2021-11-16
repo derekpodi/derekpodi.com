@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 
 /*
+import '../node_modules/spectre.css'
 import '../styles/computer.css'
 import '../styles/utils.module.css'
 */

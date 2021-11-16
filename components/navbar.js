@@ -31,8 +31,8 @@ const Navbar = () => {
                         </div>
                     
                         <div className="navbar-section">
-                            <h4>
-                                <span className="h4-normal">
+                            <h1>
+                                <span className="h1-normal">
                                     ~ / 
                                     <Link href="/">
                                     <a title="Home"> Home </a>
@@ -47,7 +47,7 @@ const Navbar = () => {
                                         </>
                                     )} 
                                 </span>
-                            </h4>
+                            </h1>
                         </div>
                     </div>
                 </div>
