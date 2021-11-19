@@ -2742,6 +2742,14 @@ p.compact-line {
     white-space: nowrap;
 }
 
+[data-theme='dark'] .btn {
+    color: #0000FF;
+  }
+
+[data-theme='dark'] .btn:hover {
+color: #fff;
+}
+
 .btn-sm {
     font-size: .8rem;
     height: 1.4rem;
