@@ -3746,8 +3746,22 @@ body {
   background: #fff;
 }
 
+[data-theme='light'],
+[data-theme='light'] html {
+  color: #000;
+  background: #fff;
+}
+
 [data-theme='dark'],
 [data-theme='dark'] html {
   color: #fff;
   background: #000000;
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom: 1px solid #fff;
+}
+
+[data-theme='dark'] a {
+  color: #FFCC66;
 }
