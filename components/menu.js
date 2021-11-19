@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import utilStyles from '../styles/utils.module.css'
+import ThemeChanger from './color'
 
 
 
@@ -48,6 +49,9 @@ const Menu = () => {
                 </li>
                 <li>
                     <Link href="/api/date"><a >Date</a></Link>
+                </li>
+                <li>
+                    <ThemeChanger />
                 </li>
             </ul>
         </div>
