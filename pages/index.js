@@ -5,6 +5,7 @@ import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
 import Image from 'next/image'
+import ThemeChanger from '../components/color'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()

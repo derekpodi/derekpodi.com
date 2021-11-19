@@ -6,6 +6,8 @@ html {
 
 body {
   margin: 0;
+  background: var(--bg);
+  color: var(--fg);
 }
 
 article,
@@ -3721,4 +3723,31 @@ a.text-error:visited {
   hyphens: auto;
   word-break: break-word;
   word-wrap: break-word;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --fg: #000;
+  --bg: #fff;
+}
+
+[data-theme='dark'] {
+  --fg: #fff;
+  --bg: #000;
+}
+
+html,
+body {
+  color: #000;
+  background: #fff;
+}
+
+[data-theme='dark'],
+[data-theme='dark'] html {
+  color: #fff;
+  background: #000000;
 }
