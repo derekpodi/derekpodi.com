@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css'
 
 const Navbar = () => {
     const router = useRouter()
-    const name = 'Derek'
+    const name = 'Derek Podimatis'
     return(
         <header className={utilStyles["container"] + " " + utilStyles["bottom-6"]}>
             <div className={utilStyles["columns"]}>

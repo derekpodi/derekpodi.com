@@ -16,7 +16,7 @@ export default function Post({ postData }) {
     <Layout>
       <div className="flex-centered">
         <br />
-        <Image src={fullPath} width={600} height={600} alt={postData.id} />
+        <Image src={fullPath} width={625} height={625} alt={postData.id} />
         <br />
       </div>
       <footer className={`${utilStyles.mh3} ${utilStyles.mt4}`}>
