@@ -21,6 +21,17 @@ function Profile () {
     return <pre className={utilStyles.mh5}>{JSON.stringify(data, null, 2)}</pre>
 }
 
+function News () {
+    const url = `https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty`
+    const { data, error } = useSWR(url, fetcher)
+  
+    if (error) return <div>failed to load</div>
+    if (!data) return <div>loading...</div>
+  
+    // render data
+    return <pre className={utilStyles.mh5}>{JSON.stringify(data, null, 2)}</pre>
+}
+
 
 export async function getServerSideProps() {
     // Fetch data from external API
@@ -50,6 +61,7 @@ const SWR = ({ albums }) => {
 
             <Profile  />
 
+            <News />
 
             <ul className={styles.grid}>
                 {albums.map(albums => {
