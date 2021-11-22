@@ -29,10 +29,21 @@ function News () {
     if (!data) return <div>loading...</div>
   
     // render data
-    return <pre className={utilStyles.mh5}>{JSON.stringify(data, null, 2)}</pre>
+    return <pre className={utilStyles.mh5}>{JSON.stringify(data.slice(0,20), null, 2)}</pre>
 }
 
-
+function News2 () {
+    const url = `https://node-hnapi.herokuapp.com/news?page=1`
+    const { data, error } = useSWR(url, fetcher)
+  
+    if (error) return <div>failed to load</div>
+    if (!data) return <div>loading...</div>
+  
+    // render data
+    return (<pre className={utilStyles.mh5}>{JSON.stringify(data.slice(0,10), null, 2)}</pre>
+    )
+}
+  
 export async function getServerSideProps() {
     // Fetch data from external API
     const url = `https://jsonplaceholder.typicode.com/albums`
@@ -62,6 +73,8 @@ const SWR = ({ albums }) => {
             <Profile  />
 
             <News />
+
+            <News2 />
 
             <ul className={styles.grid}>
                 {albums.map(albums => {
