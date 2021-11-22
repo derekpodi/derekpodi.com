@@ -4,6 +4,7 @@ import utilStyles from '../../styles/utils.module.css'
 import styles from '../../styles/swr.module.css'
 import Link from 'next/link'
 import useSWR from 'swr'
+import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
@@ -29,7 +30,7 @@ function News () {
     if (!data) return <div>loading...</div>
   
     // render data
-    return <pre className={utilStyles.mh5}>{JSON.stringify(data.slice(0,20), null, 2)}</pre>
+    return <pre className={utilStyles.mh5}>{JSON.stringify(data.slice(0,10), null, 2)}</pre>
 }
 
 function News2 () {
@@ -40,8 +41,7 @@ function News2 () {
     if (!data) return <div>loading...</div>
   
     // render data
-    return (<pre className={utilStyles.mh5}>{JSON.stringify(data.slice(0,10), null, 2)}</pre>
-    )
+    return <pre className={utilStyles.mh5}>{JSON.stringify(data, null, 2)}</pre>
 }
   
 export async function getServerSideProps() {
