@@ -3765,3 +3765,7 @@ body {
 [data-theme='dark'] a {
   color: #FFCC66;
 }
+
+[data-theme='dark'] pre {
+  background: #000;
+}
