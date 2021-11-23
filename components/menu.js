@@ -45,6 +45,9 @@ const Menu = () => {
                     <Link href="/media"><a >Media</a></Link>
                 </li>
                 <li>
+                    <Link href="/dna"><a >DNA</a></Link>
+                </li>
+                <li>
                     <Link href="/swr"><a >SWR</a></Link>
                 </li>
                 <li>
