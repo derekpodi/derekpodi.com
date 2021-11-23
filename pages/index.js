@@ -29,7 +29,7 @@ export default function Home({ allPostsData }) {
       </Head>
       
       <div className={utilStyles.center}
-        style={{ position: "relative", width: 600, height: 600 }}>
+        style={{ position: "relative", width: 500, height: 500 }}>
         <Canvas camera={{ position: [0, 0, 20] }}>
           <ambientLight intensity={2} />
           <pointLight position={[40, 40, 40]} />
