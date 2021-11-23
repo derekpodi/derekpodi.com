@@ -9,7 +9,7 @@ import ThemeChanger from '../components/color'
 
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
-import Box from '../components/Box'
+import Box from '../components/box'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
