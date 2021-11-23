@@ -7,6 +7,10 @@ import Date from '../components/date'
 import Image from 'next/image'
 import ThemeChanger from '../components/color'
 
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+import Box from '../components/Box'
+
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
@@ -24,6 +28,19 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       
+      <div className={utilStyles.center}
+        style={{ position: "relative", width: 600, height: 600 }}>
+        <Canvas camera={{ position: [0, 0, 20] }}>
+          <ambientLight intensity={2} />
+          <pointLight position={[40, 40, 40]} />
+          <Box position={[10, 0, 0]} />
+          <Box position={[-10, 0, 0]} />
+          <Box position={[0, 10, 0]} />
+          <Box position={[0, -10, 0]} />
+          <OrbitControls />
+        </Canvas>
+      </div>
+
       {/*TODO: ADD/Fix Landing Page
 
       <section className={utilStyles.headingMd}>
