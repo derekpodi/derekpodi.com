@@ -41,7 +41,7 @@ function News2 () {
     if (!data) return <div>loading...</div>
   
     // render data
-    return <pre className={utilStyles.mh5}>{JSON.stringify(data, null, 2)}</pre>
+    return <pre className={utilStyles.mh5}>{JSON.stringify(data.slice(0,10),["id", "title", "points", "url"], 2)}</pre>
 }
   
 export async function getServerSideProps() {
@@ -49,15 +49,14 @@ export async function getServerSideProps() {
     const url = `https://jsonplaceholder.typicode.com/albums`
     const res = await fetch(url)
     const data = await res.json()
-  
+
     // Pass data to the page via props
     return { 
         props: {
-             albums: data 
-        } 
+             albums: data
+        }
     }
   }
-
 
 const SWR = ({ albums }) => {
     return (
