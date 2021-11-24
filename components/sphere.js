@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
-import { Box as NativeBox } from '@react-three/drei'
+import { Sphere as NativeSphere } from '@react-three/drei'
 
-export default function Box(props) {
+export default function Sphere(props) {
   const mesh = useRef()
 
   const [hovered, setHover] = useState(false)
@@ -11,8 +11,8 @@ export default function Box(props) {
   useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01))
 
   return (
-    <NativeBox
-      args={[1, 1, 1]}
+    <NativeSphere
+      args={[2]}
       {...props}
       ref={mesh}
       scale={active ? [6, 6, 6] : [5, 5, 5]}
@@ -22,9 +22,9 @@ export default function Box(props) {
     >
       <meshStandardMaterial
         attach="material"
-        color={hovered ? '#2b6c76' : '#720b23'}
+        color={hovered ? '#0000FF' : '#720b23'}
         wireframe
       />
-    </NativeBox>
+    </NativeSphere>
   )
 }
