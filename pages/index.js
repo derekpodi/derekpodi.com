@@ -29,8 +29,8 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       
-      <div className={utilStyles.center}
-        style={{ position: "relative", width: 350, height: 350}}>
+      <div className={utilStyles.center} 
+        style={{ position: "relative", width: 450, height: 450}}>
         <Canvas camera={{ position: [0, 0, 20] }}>
           <ambientLight intensity={3} />
           <pointLight position={[40, 40, 40]} />
