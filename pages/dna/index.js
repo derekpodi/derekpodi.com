@@ -26,6 +26,9 @@ const DNA = () => {
         <Layout DNA>
             <div> 
                 <h1>API** Route Not Working Yet **</h1>
+                <Link href="https://www.bioinformatics.org/sms/iupac.html">
+                    <a>Nucleotide code dictionary </a>
+                </Link>
                 <h1>DNA Tool</h1>
                 <br />
                 <p>Paste your DNA sequence in and transform as it needed.</p>
