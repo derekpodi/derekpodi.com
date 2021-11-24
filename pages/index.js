@@ -10,6 +10,7 @@ import ThemeChanger from '../components/color'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import Box from '../components/box'
+import Sphere from '../components/sphere'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -29,14 +30,17 @@ export default function Home({ allPostsData }) {
       </Head>
       
       <div className={utilStyles.center}
-        style={{ position: "relative", width: 500, height: 500 }}>
+        style={{ position: "relative", width: 350, height: 350}}>
         <Canvas camera={{ position: [0, 0, 20] }}>
-          <ambientLight intensity={2} />
+          <ambientLight intensity={3} />
           <pointLight position={[40, 40, 40]} />
+          <Sphere position={[0, 0, 0]} />
+          {/*
           <Box position={[10, 0, 0]} />
           <Box position={[-10, 0, 0]} />
           <Box position={[0, 10, 0]} />
           <Box position={[0, -10, 0]} />
+          */}
           <OrbitControls />
         </Canvas>
       </div>

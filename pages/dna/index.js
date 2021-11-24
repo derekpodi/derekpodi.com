@@ -4,6 +4,24 @@ import Link from 'next/link'
 
 
 const DNA = () => {
+
+    const submitDNA = async (event) => {
+        event.preventDefault();
+        
+        const res = await fetch('/api/dna', {
+            body: JSON.stringify({
+              name: event.target.name.value
+            }),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'POST'
+          })
+      
+          const result = await res.json()
+          // result.user => 'Ada Lovelace'
+        }
+
     return (
         <Layout DNA>
             <div> 
@@ -18,7 +36,7 @@ const DNA = () => {
                         <tr>
                             <th>Input Sequence:</th>
                             <td>
-                                <form name="form1" action="">
+                                <form name="form1" method="post" onSubmit={submitDNA}>
                                     <textarea name="text" rows="8" cols="50"></textarea>
                                 </form>
                             </td>
@@ -29,7 +47,8 @@ const DNA = () => {
                 <table>
                     <tbody>
                         <tr>
-                            <th>
+                            <th></th>
+                            <td width="150"></td>
                             <td>
                                 <input type="submit" name="action" value="Remove numbers and spaces"></input>
                                 <p></p>
@@ -40,9 +59,8 @@ const DNA = () => {
                                 </select>
 
                                 <input type="submit" name="action" value="SUBMIT"></input>
-
+                                <p></p>
                             </td>
-                            </th>
                         </tr>
                     </tbody>
                 </table>
@@ -64,6 +82,7 @@ const DNA = () => {
                     <tbody>
                         <tr>
                             <th>
+                            <td width="150"></td>
                             <td>
                                 <select>
                                     <option value="capitalize">Capitalize Result</option>
