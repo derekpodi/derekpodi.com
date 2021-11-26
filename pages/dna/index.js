@@ -18,7 +18,9 @@ const DNA = () => {
             method: 'POST',
         });
         const result = await res.json();
-        alert(`Alert: ${result.name}`);
+        //console.log(result);
+        //alert(`Alert: ${result.name}`);
+        document.getElementById('name').value = `${result.name}`;
     };
 
     
