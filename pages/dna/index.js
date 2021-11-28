@@ -14,6 +14,8 @@ const DNA = () => {
             }),
             headers: {
             'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Credentials" : true,
             },
             method: 'POST',
         });
@@ -23,8 +25,38 @@ const DNA = () => {
         document.getElementById('name').value = `${result.name}`;
     };
 
-    
+    const submitMode = async (event) => {
+        event.preventDefault();
+        const mode = event.target.mode.value;
+        const seq = document.getElementById('name').value
+        const res = await fetch('/api/mode', {
+            body: JSON.stringify({ 
+            mode: mode,
+            seq: seq,
+            }),
+            headers: {
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Credentials" : true,
+            },
+            method: 'POST',
+        });
+        const result = await res.json();
+        //console.log(result);
+        //alert(`Alert: ${result.name}`);
+        document.getElementById('text').value = `${result.seq}`;
+    };
 
+    
+    function caseCheck() {
+        const check = document.getElementById('case').value;
+        const temp = document.getElementById('text').value
+        if (check === "capitalize") {
+            document.getElementById('text').value = temp.toUpperCase()
+        } else if (check === "lowercase") {
+            document.getElementById('text').value = temp.toLowerCase()
+        }
+    }
 
     return (
         <Layout DNA>
@@ -49,15 +81,15 @@ const DNA = () => {
                                     <button type="submit">Remove numbers and spaces</button>
                                 </form>
 
-                                <form>
-                                    <br></br>
-                                    <select>
-                                        <option value="complement">Complementary Sequence</option>
-                                        <option value="reverse">Reverse Sequence</option>
-                                        <option value="rev_comp">Reverse-Complementary Sequence</option>
+                                <form onSubmit={submitMode}>
+                                    <label htmlFor="mode" />
+                                    <select name="mode" id="mode" type="text" required>
+                                        <option value="comp">Complementary Sequence</option>
+                                        <option value="rev">Reverse Sequence</option>
+                                        <option value="revComp">Reverse-Complementary Sequence</option>
                                     </select>
                                     &nbsp;&nbsp;&nbsp;
-                                    <input type="submit" name="action" value="SUBMIT"></input>
+                                    <button type="submit">SUBMIT</button>
                                 </form>
                             </td>
                         </tr>
@@ -72,9 +104,9 @@ const DNA = () => {
                             <th>Your Results:</th>
                             <td>
                                 <form name="form1" action="">
-                                    <textarea id='text' name="text" rows="8" cols="50" defaultValue="" ></textarea>
+                                    <textarea id='text' name="text" rows="8" cols="50"></textarea>
                                     <br></br>
-                                    <select>
+                                    <select name="case" id="case" onChange={caseCheck} >
                                         <option value="capitalize">Capitalize Result</option>
                                         <option value="lowercase">Lowercase Result</option>
                                     </select>
