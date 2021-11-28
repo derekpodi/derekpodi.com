@@ -58,6 +58,14 @@ const DNA = () => {
         }
     }
 
+    function numSpaceCheck() {
+        event.preventDefault();
+        const check = document.getElementById('name').value;
+        const reg = /\d|\s/g
+        const checkFix = check.replaceAll(reg,"");
+        document.getElementById('name').value = checkFix
+    }
+
     return (
         <Layout DNA>
             <div> 

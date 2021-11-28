@@ -8,5 +8,6 @@ export default function handler(req, res) {
     if (!ret.name) {
       return res.status(500).json({ msg: 'Name was not found' });
     }
-    res.status(200).json({ name: `${ret.name}` });
+    
+    return res.status(200).json({ name: `${ret.name}` });
   }
