@@ -82,7 +82,7 @@ const DNA = () => {
                         <tr>
                             <th>Input Sequence:</th>
                             <td>
-                                <form onSubmit={submitDNA}>
+                                <form onSubmit={numSpaceCheck}>
                                     <label htmlFor="name" />
                                     <textarea id="name" name="name" type="text" autoComplete="name" required rows="8" cols="50"/>
                                     <br />
@@ -115,6 +115,7 @@ const DNA = () => {
                                     <textarea id='text' name="text" rows="8" cols="50"></textarea>
                                     <br></br>
                                     <select name="case" id="case" onChange={caseCheck} >
+                                        <option value="none" selected disabled hidden>--Select an Option--</option>
                                         <option value="capitalize">Capitalize Result</option>
                                         <option value="lowercase">Lowercase Result</option>
                                     </select>
