@@ -66,11 +66,74 @@ const DNA = () => {
         document.getElementById('name').value = checkFix
     }
 
+    function dnaMode() {
+        event.preventDefault();
+        const mode = event.target.mode.value;
+        const seq = document.getElementById('name').value;
+
+        if (mode === "comp") {
+            const splitSeq = seq.split("");
+            for (let i = 0; i < splitSeq.length; i++) {
+                if (splitSeq[i] === "A" || splitSeq[i] === "a") {
+                    splitSeq[i] = "T"
+                } else if (splitSeq[i] === "T" || splitSeq[i] === "t"|| splitSeq[i] === "U"|| splitSeq[i] === "u") {
+                    splitSeq[i] = "A"
+                } else if (splitSeq[i] === "C" || splitSeq[i] === "c") {
+                    splitSeq[i] = "G"
+                } else if (splitSeq[i] === "G" || splitSeq[i] === "g") {
+                    splitSeq[i] = "C"
+                } else if (splitSeq[i] === "R" || splitSeq[i] === "r") {
+                    splitSeq[i] = "Y"
+                } else if (splitSeq[i] === "Y" || splitSeq[i] === "y") {
+                    splitSeq[i] = "R"
+                } else if (splitSeq[i] === "W" || splitSeq[i] === "w") {
+                    splitSeq[i] = "W"
+                } else if (splitSeq[i] === "S" || splitSeq[i] === "s") {
+                    splitSeq[i] = "S"
+                } else if (splitSeq[i] === "N" || splitSeq[i] === "n") {
+                    splitSeq[i] = "N"
+                }
+              }
+            seq = splitSeq.join("");
+            document.getElementById('text').value = seq
+            
+        } else if (mode === "rev") {
+            seq = seq.split("").reverse().join("").toUpperCase();
+            document.getElementById('text').value = seq
+
+        } else if (mode === "revComp") {
+            const splitSeq = seq.split("");
+            for (let i = 0; i < splitSeq.length; i++) {
+                if (splitSeq[i] === "A" || splitSeq[i] === "a") {
+                    splitSeq[i] = "T"
+                } else if (splitSeq[i] === "T" || splitSeq[i] === "t"|| splitSeq[i] === "U"|| splitSeq[i] === "u") {
+                    splitSeq[i] = "A"
+                } else if (splitSeq[i] === "C" || splitSeq[i] === "c") {
+                    splitSeq[i] = "G"
+                } else if (splitSeq[i] === "G" || splitSeq[i] === "g") {
+                    splitSeq[i] = "C"
+                } else if (splitSeq[i] === "R" || splitSeq[i] === "r") {
+                    splitSeq[i] = "Y"
+                } else if (splitSeq[i] === "Y" || splitSeq[i] === "y") {
+                    splitSeq[i] = "R"
+                } else if (splitSeq[i] === "W" || splitSeq[i] === "w") {
+                    splitSeq[i] = "W"
+                } else if (splitSeq[i] === "S" || splitSeq[i] === "s") {
+                    splitSeq[i] = "S"
+                } else if (splitSeq[i] === "N" || splitSeq[i] === "n") {
+                    splitSeq[i] = "N"
+                }
+              }
+            seq = splitSeq.join("");
+            seq = seq.split("").reverse().join("");
+            document.getElementById('text').value = seq
+        }
+
+    }
+
     return (
         <Layout DNA>
-            <div> 
-                <h1>API** Route Not Working Yet **</h1>
-                
+            <div>                 
                 <h1>DNA Tool</h1>
                 <Link href="https://www.bioinformatics.org/sms/iupac.html">
                     <a>Nucleotide code dictionary </a>
@@ -89,7 +152,7 @@ const DNA = () => {
                                     <button type="submit">Remove numbers and spaces</button>
                                 </form>
 
-                                <form onSubmit={submitMode}>
+                                <form onSubmit={dnaMode}>
                                     <label htmlFor="mode" />
                                     <select name="mode" id="mode" type="text" required>
                                         <option value="comp">Complementary Sequence</option>
