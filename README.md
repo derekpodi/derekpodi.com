@@ -1,34 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## derekpodi.com
 
-## Getting Started
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Deployment**: [Vercel](https://vercel.com)
+- **Content**: [MDX](https://github.com/mdx-js/mdx)
+- **Styling**: [Spectre CSS](https://picturepan2.github.io/spectre/)
 
-First, run the development server:
+## Creation
+
+This project initially started with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+The project takes advantage of Vercel's Github integration and CLI. First, I created a branch that acts as the staging area for deployment via git.
 
 ```bash
-npm run dev
-# or
-yarn dev
+$ git checkout -b deploy-with-git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This allowed me to add any changes made to the website to a staging branch that can merge later. To add all current changes:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+$ git add .
+$ git commit -m "varaiable message about changes"
+$ git push --set-upstream origin deploy-with-git
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Upon creation of the pull request on Github, webhooks with Vercel start to run a build on the preview environment. If confirmed, will push into production view.
+To see changes at any point on the localhost:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+$ vercel dev
+$ yarn dev
+```
 
-## Learn More
+## Overview
 
-To learn more about Next.js, take a look at the following resources:
+- `api/*` - [API routes](https://nextjs.org/docs/api-routes/introduction) powering [`/api/date`] and other serverless functions
+- `components/*` - The different reusable components used in page layout
+- `lib/*` - Short for "library", a collection of helpful utilities or code for external services.
+- `pages/*` - All other static pages.
+- `posts/*` - Static pre-rendered blog pages using MDX.
+- `public/*` - Static assets including fonts and images.
+- `styles/*` - A small amount of global styles.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Running Locally
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To try the site yourself, run at the CL:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+$ git clone https://github.com/derekpodi/derekpodi.com.git
+$ cd derekpodi.com
+$ yarn
+$ yarn dev
+```
