@@ -7,10 +7,6 @@ import Date from '../components/date'
 import Image from 'next/image'
 import ThemeChanger from '../components/color'
 
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
-import Box from '../components/box'
-import Sphere from '../components/sphere'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -29,21 +25,6 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       
-      <div className={utilStyles.center} 
-        style={{ position: "relative", width: 450, height: 450}}>
-        <Canvas camera={{ position: [0, 0, 20] }}>
-          <ambientLight intensity={3} />
-          <pointLight position={[40, 40, 40]} />
-          <Sphere position={[0, 0, 0]} />
-          {/*
-          <Box position={[10, 0, 0]} />
-          <Box position={[-10, 0, 0]} />
-          <Box position={[0, 10, 0]} />
-          <Box position={[0, -10, 0]} />
-          */}
-          <OrbitControls />
-        </Canvas>
-      </div>
 
       {/*TODO: ADD/Fix Landing Page
 
@@ -66,15 +47,3 @@ export default function Home({ allPostsData }) {
     </Layout>
   )
 }
-
-
-/*
-//Server Side Rendering (API) - https://nextjs.org/docs/basic-features/data-fetching#sideprops-server-side-rendering
-export async function SideProps(context) {
-  return {
-    props: {
-      // props for your component
-    }
-  }
-}
-*/

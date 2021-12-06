@@ -11,7 +11,10 @@ const Notes = () => {
                 <h1>Notes</h1>
                 <br />
                 <p>* Commented Out API Button Element * </p>
-                <p>Testing Serverless function size with deployment</p>
+                <p>Serverless function size too big for deployment currently</p>
+                <Link href="https://github.com/vercel/vercel/discussions/6516">
+                    <a>Github Issue Tracker</a>
+                </Link>
 
                 {/* <p>Enter a Stock Ticker - returns investment bank grades tally</p> */}
             </div>

@@ -24,7 +24,11 @@ const About = () => {
                   </tr>
                   <tr>
                     <td>Education</td>
-                    <td><a href="https://www.ibp.ucla.edu">UCLA</a> </td>
+                    <td>
+                      <Link href="https://www.ibp.ucla.edu">
+                        <a>UCLA</a>
+                      </Link>
+                    </td>
                   </tr>
                 </tbody>
               </table>
