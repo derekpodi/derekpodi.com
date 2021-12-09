@@ -8,20 +8,23 @@ const Three = () => {
         <Layout Three>
             <div>
                 <h1>3D Model Tests</h1>
-                <p>
-                    <Link href="/3d/sphere">
-                        <a>Sphere</a>
-                    </Link>
                 <br/>
-                    <Link href="/3d/box">
-                        <a>Box</a>
+                <h2>
+                    <Link href="/3d/sphere">
+                        <a>-Sphere</a>
                     </Link>
-                </p>
+                <br/><br/>
+                    <Link href="/3d/box">
+                        <a>-Box</a>
+                    </Link>
+                <br/><br/>
+
+                </h2>
                 <p>
                     Instructions: <br/>
                     Left Click - Enlarge Models <br/>
                     Left Click + Drag - Spin <br/>
-                    Right Click - Move Camera
+                    Right Click + Drag - Move Camera Viewport
                 </p>
             </div>
         </Layout>
