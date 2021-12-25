@@ -15,6 +15,9 @@ const Notes = () => {
                 <Link href="https://github.com/vercel/vercel/discussions/6516">
                     <a>Github Issue Tracker</a>
                 </Link>
+                <br /><br /><br />
+                <p>Add Book Section</p>
+                <p>Add Article Section</p>
 
                 {/* <p>Enter a Stock Ticker - returns investment bank grades tally</p> */}
             </div>
