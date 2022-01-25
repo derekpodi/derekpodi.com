@@ -19,7 +19,7 @@ export default function Custom404() {
       <div className="not-found">
         <h1>Oops... 404 - Page Not Found</h1>
         <h2>Teleporting you back to the homepage </h2>
-        <p>Go back to the --> <Link href='/'><a>Homepage</a></Link></p>
+        <p>Go back to the -- <Link href='/'><a>Homepage</a></Link></p>
         {/*<iframe src="https://www.lexaloffle.com/bbs/widget.php?pid=picodino" allowFullScreen width="621" height="513" ></iframe> */}
       </div>  
     );
