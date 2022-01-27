@@ -18,6 +18,11 @@ const Three = () => {
                         <a>-Box</a>
                     </Link>
                 <br/><br/>
+                    <Link href="/3d/scroll">
+                        <a>-Scroll</a>
+                    </Link>
+                <br/><br/>
+
 
                 </h2>
                 <p>
