@@ -10,6 +10,10 @@ import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
 import { RGBShiftShader } from "three/examples/jsm/shaders/RGBShiftShader.js";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
 
+import Link from 'next/link'
+import utilStyles from '../../../styles/utils.module.css'
+
+
 const Index = () => {
   const mountRef = useRef(null);
 
@@ -324,6 +328,11 @@ const Index = () => {
             <a href="https://blog.maximeheckel.com/posts/vaporwave-3d-scene-with-threejs/">
               Building a Vaporwave scene with Three.js
             </a>
+          </p>
+          <p className="label">
+            <Link href="/3d">
+                    <a>← Back to 3D</a>
+            </Link>
           </p>
         </div>
         <canvas ref={mountRef} className="webgl"></canvas>
