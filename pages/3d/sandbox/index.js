@@ -32,7 +32,6 @@ const Index = () => {
 
     // Fog
     const fog = new THREE.Fog("#000000", 1, 2.5);
-
     scene.fog = fog;
 
     // Textures
@@ -47,8 +46,8 @@ const Index = () => {
       metalness: 1,
       roughness: 0.5,
     };
-
-    const geometry = new THREE.PlaneGeometry(1, 2, 24, 24);
+    
+    const geometry = new THREE.BoxGeometry(.5, .5, .5);
     const material = new THREE.MeshStandardMaterial({
       //map: gridTexture,
       //displacementMap: heightTexture,
@@ -79,7 +78,7 @@ const Index = () => {
 
     const spotlight = new THREE.SpotLight(
       "#d53c3d",
-      40,
+      5,
       25,
       Math.PI * 0.1,
       0.25
@@ -93,7 +92,7 @@ const Index = () => {
 
     const spotlight2 = new THREE.SpotLight(
       "#d53c3d",
-      40,
+      5,
       25,
       Math.PI * 0.1,
       0.25
@@ -120,7 +119,7 @@ const Index = () => {
       20
     );
     camera.position.x = 0;
-    camera.position.y = 0.1;
+    camera.position.y = 0.5;
     camera.position.z = 1.1;
 
     
