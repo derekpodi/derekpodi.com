@@ -22,6 +22,10 @@ const Three = () => {
                         <a>-Scroll</a>
                     </Link>
                 <br/><br/>
+                    <Link href="/3d/sandbox">
+                        <a>-Sandbox</a>
+                    </Link>
+                <br/><br/>
 
 
                 </h2>
