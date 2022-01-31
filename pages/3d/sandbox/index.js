@@ -22,7 +22,7 @@ const Index = () => {
      * Base
      */
     // Debug
-    const gui = new dat.GUI();
+    //const gui = new dat.GUI();
 
     // Canvas
     const canvas = document.querySelector("canvas.webgl");
@@ -120,7 +120,7 @@ const Index = () => {
       20
     );
     camera.position.x = 0;
-    camera.position.y = 0.5;
+    camera.position.y = 0.6;
     camera.position.z = 1.1;
 
     
@@ -189,11 +189,14 @@ const Index = () => {
       const elapsedTime = clock.getElapsedTime();
 
       // Update plane position
-      plane.position.x = (elapsedTime * 0.2) % 2;
-      plane2.position.x = ((elapsedTime * 0.2) % 2) - 2;
+      
     
       plane.position.z = (elapsedTime * 0.2) % 2;
       plane2.position.z = ((elapsedTime * 0.2) % 2) - 2;
+
+      plane.rotation.z += 0.007;
+      plane2.rotation.z += 0.007;  
+
 
       // Update controls
       controls.update();
