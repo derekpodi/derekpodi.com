@@ -36,6 +36,7 @@ const Index = () => {
 
     // Textures
     const textureLoader = new THREE.TextureLoader();
+    const gridTexture = textureLoader.load("/favicon.png");
     //const gridTexture = textureLoader.load("/grid-6.png");
     //const heightTexture = textureLoader.load("/displacement-7.png");
     //const metalnessTexture = textureLoader.load("/metalness-2.png");
@@ -49,7 +50,7 @@ const Index = () => {
     
     const geometry = new THREE.BoxGeometry(.5, .5, .5);
     const material = new THREE.MeshStandardMaterial({
-      //map: gridTexture,
+      map: gridTexture,
       //displacementMap: heightTexture,
       displacementScale: parameters.displacementScale,
       metalness: parameters.metalness,
@@ -188,6 +189,9 @@ const Index = () => {
       const elapsedTime = clock.getElapsedTime();
 
       // Update plane position
+      plane.position.x = (elapsedTime * 0.2) % 2;
+      plane2.position.x = ((elapsedTime * 0.2) % 2) - 2;
+    
       plane.position.z = (elapsedTime * 0.2) % 2;
       plane2.position.z = ((elapsedTime * 0.2) % 2) - 2;
 
