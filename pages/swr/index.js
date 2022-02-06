@@ -3,6 +3,7 @@ import Layout, { siteTitle } from '../../components/layout'
 import utilStyles from '../../styles/utils.module.css'
 import styles from '../../styles/swr.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 import useSWR from 'swr'
 import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 
@@ -98,6 +99,16 @@ const SWR = ({ albums }) => {
             <h2> Vimeo Embed</h2>
             <div className="video-responsive">
                 <iframe src="https://player.vimeo.com/video/1084537?h=b1b3ab5aa2" width="..." height="..." frameBorder="0" allowFullScreen></iframe>
+            </div>
+            <br></br>
+            <h2> Gif Embed</h2>
+            <div>
+                <Image 
+                src="/../public/BoneZone.gif" 
+                alt="landing page image" 
+                width={250} 
+                height={250}
+                />            
             </div>
         </Layout>
         
