@@ -110,6 +110,15 @@ const SWR = ({ albums }) => {
                 height={250}
                 />            
             </div>
+            <div>
+            <h2>Audio Embed</h2>
+            <audio
+                controls
+                src="/../public/">
+                    Your browser does not support the
+                    <code>audio</code> element.
+            </audio>
+            </div>
         </Layout>
         
     );
