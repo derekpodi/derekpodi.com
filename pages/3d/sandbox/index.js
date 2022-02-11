@@ -79,7 +79,7 @@ const Index = () => {
 
     const spotlight = new THREE.SpotLight(
       "#d53c3d",
-      5,
+      3,
       25,
       Math.PI * 0.1,
       0.25
@@ -93,7 +93,7 @@ const Index = () => {
 
     const spotlight2 = new THREE.SpotLight(
       "#d53c3d",
-      5,
+      3,
       25,
       Math.PI * 0.1,
       0.25
@@ -194,8 +194,8 @@ const Index = () => {
       plane.position.z = (elapsedTime * 0.2) % 2;
       plane2.position.z = ((elapsedTime * 0.2) % 2) - 2;
 
-      plane.rotation.z += 0.007;
-      plane2.rotation.z += 0.007;  
+      plane.rotation.z += 0.009;
+      plane2.rotation.z += 0.009;  
 
 
       // Update controls
