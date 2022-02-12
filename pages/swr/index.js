@@ -104,7 +104,7 @@ const SWR = ({ albums }) => {
             <h2> Gif Embed</h2>
             <div>
                 <Image 
-                src="/../public/BoneZone.gif" 
+                src="/../public/BZ.gif" 
                 alt="landing page image" 
                 width={250} 
                 height={250}
