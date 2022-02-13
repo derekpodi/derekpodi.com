@@ -34,7 +34,7 @@ export default function Photos({ allPostsData }) {
                     {allPostsData.map(({ id }) => (
                       <li className={styles.listItem} key={id}>
                       <Link href={`/photos/${id}`}>
-                        <a><Image src={`/images/${id}.jpg`} width={283} height={283} alt={allPostsData.id} /> </a>
+                        <a><Image src={`/images/${id}.jpg`} width={283} height={283} quality={100} alt={allPostsData.id} /> </a>
                       </Link>
                       <br />
                     </li>
