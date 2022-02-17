@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import Image from 'next/image';
+
 
 export default function Custom404() {
 
@@ -21,6 +23,14 @@ export default function Custom404() {
         <h2>Teleporting you back to the homepage </h2>
         <p>Go back to the -- <Link href='/'><a>Homepage</a></Link></p>
         {/*<iframe src="https://www.lexaloffle.com/bbs/widget.php?pid=picodino" allowFullScreen width="621" height="513" ></iframe> */}
+        <section className="flex-centered">
+          <Image 
+            src="/../public/pain.jpg" 
+            alt="landing page image" 
+            width={500} 
+            height={500}
+          />
+        </section>
       </div>  
     );
   }
