@@ -3,8 +3,9 @@
 import Link from 'next/link'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 
+import Image from 'next/image'
+import pain from '../public/pain.jpg'
 
 export default function Custom404() {
 
@@ -13,19 +14,20 @@ export default function Custom404() {
   useEffect(() => {
     setTimeout(() => {
       router.push('/');
-    }, 5000)
+    }, 7000)
   }, [router])
   
   
     return (
       <div className="not-found">
+        <br></br>
         <h1>Oops... 404 - Page Not Found</h1>
         <h2>Teleporting you back to the homepage </h2>
         <p>Go back to the -- <Link href='/'><a>Homepage</a></Link></p>
         {/*<iframe src="https://www.lexaloffle.com/bbs/widget.php?pid=picodino" allowFullScreen width="621" height="513" ></iframe> */}
         <section className="flex-centered">
           <Image 
-            src="/../public/pain.jpg" 
+            src={pain} 
             alt="landing page image" 
             width={500} 
             height={500}
