@@ -19,7 +19,7 @@ function Profile () {
     if (!data) return <div>loading...</div>
   
     // render data
-    return <pre className={utilStyles.mh5}>{JSON.stringify(data, null, 2)}</pre>
+    return <pre className="flex-left">{JSON.stringify(data, null, 2)}</pre>
 }
 
 function News () {
@@ -30,7 +30,7 @@ function News () {
     if (!data) return <div>loading...</div>
   
     // render data
-    return <pre className={utilStyles.mh5}>{JSON.stringify(data.slice(0,10), null, 2)}</pre>
+    return <pre className="flex-left">{JSON.stringify(data.slice(0,10), null, 2)}</pre>
 }
 
 function News2 () {
@@ -41,7 +41,7 @@ function News2 () {
     if (!data) return <div>loading...</div>
   
     // render data
-    return <pre className={utilStyles.mh5}>{JSON.stringify(data.slice(0,10),["id", "title", "points", "url"], 2)}</pre>
+    return <pre className="flex-left">{JSON.stringify(data.slice(0,10),["id", "title", "points", "url"], 2)}</pre>
 }
   
 export async function getServerSideProps() {
@@ -69,12 +69,13 @@ const SWR = ({ albums }) => {
                 <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
             </p>
 
-            <Profile  />
+            <Profile />
 
             <News />
 
             <News2 />
 
+        
             <ul className={styles.grid}>
                 {albums.map(albums => {
                     return (
