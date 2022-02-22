@@ -1409,7 +1409,13 @@ code {
 
 pre {
   padding:.4rem .8rem;
-  background:#fffbed
+  background:#fffbed;
+  overflow-x: auto;
+  white-space: pre;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
 }
 
 .img-responsive {
