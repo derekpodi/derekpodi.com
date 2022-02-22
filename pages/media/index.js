@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Layout, { siteTitle } from '../../components/layout'
 import utilStyles from '../../styles/utils.module.css'
 import Link from 'next/link'
@@ -21,7 +20,7 @@ const Media = ({ users }) => {
             <div>
                 <h1>Media</h1>
                 <br />
-                <p>External API testing with dynamic pages </p>
+                <p>External API testing with dynamic pages: <a href="https://jsonplaceholder.typicode.com/"> JSON SRC</a></p>
                 {users.map(users => (
                     <Link href={'/media/' + users.id} key={users.id}>
                         <a>

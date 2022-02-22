@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Layout, { siteTitle } from '../../components/layout'
 import utilStyles from '../../styles/utils.module.css'
 import styles from '../../styles/swr.module.css'
