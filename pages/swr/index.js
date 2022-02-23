@@ -101,6 +101,12 @@ const SWR = ({ albums }) => {
                 <iframe src="https://player.vimeo.com/video/1084537?h=b1b3ab5aa2" width="..." height="..." frameBorder="0" allowFullScreen></iframe>
             </div>
             <br></br>
+            {/*   
+            <h2>Video Embed</h2>
+            <video loop autoPlay>
+                <source src={require('/../public/bz.mp4')} type="video/mp4" />
+            </video>
+            */}
             <h2> Gif Embed</h2>
             <div>
                 <Image 
@@ -114,7 +120,7 @@ const SWR = ({ albums }) => {
             <h2>Audio Embed</h2>
             <audio
                 controls
-                src="/../public/">
+                src="/../public/hey.wav">
                     Your browser does not support the
                     <code>audio</code> element.
             </audio>
