@@ -21,7 +21,8 @@
     "remark-html": "^13.0.2",
     "spectre.css": "^0.5.9",
     "swr": "^1.0.0",
-    "three": "^0.134.0"
+    "three": "^0.134.0",
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
     "eslint": "7.32.0",
