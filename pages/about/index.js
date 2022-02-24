@@ -44,7 +44,7 @@ const About = () => {
                   <tbody>
                     <tr>
                       <td>Email</td>
-                      <td>derekpodi at gmail dot com</td>
+                      <td>(first name)podi at gmail dot com</td>
                     </tr>
                     <tr>
                       <td>Github</td>
