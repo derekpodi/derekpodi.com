@@ -64,7 +64,7 @@ const SWR = ({ albums }) => {
     const BoopButton = () => {
         const [play] = useSound('/hey.wav')
       
-        return <button onClick={play}>Boop!</button>
+        return <button onClick={play}>Hey!</button>
     }
     
     return (
@@ -112,7 +112,7 @@ const SWR = ({ albums }) => {
 
             <h2>Video Embed</h2>
             <video width="250" height="250" controls loop autoPlay>
-                <source src={('/bz.mp4')} type="video/mp4" />
+                <source src='/bz.mp4' type="video/mp4" />
             </video>
             
             <h2> Gif Embed</h2>
