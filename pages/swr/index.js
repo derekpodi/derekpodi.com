@@ -6,6 +6,7 @@ import Image from 'next/image'
 import useSWR from 'swr'
 import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 
+import useSound from 'use-sound'
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
@@ -59,6 +60,13 @@ export async function getServerSideProps() {
   }
 
 const SWR = ({ albums }) => {
+
+    const BoopButton = () => {
+        const [play] = useSound('/hey.wav')
+      
+        return <button onClick={play}>Boop!</button>
+    }
+    
     return (
         <Layout SWR>
             <p>
@@ -101,16 +109,16 @@ const SWR = ({ albums }) => {
                 <iframe src="https://player.vimeo.com/video/1084537?h=b1b3ab5aa2" width="..." height="..." frameBorder="0" allowFullScreen></iframe>
             </div>
             <br></br>
-            {/*   
+
             <h2>Video Embed</h2>
-            <video loop autoPlay>
-                <source src={require('/../public/bz.mp4')} type="video/mp4" />
+            <video width="250" height="250" controls loop autoPlay>
+                <source src={('/bz.mp4')} type="video/mp4" />
             </video>
-            */}
+            
             <h2> Gif Embed</h2>
             <div>
                 <Image 
-                src="/../public/BZ.gif" 
+                src="/BZ.gif" 
                 alt="landing page image" 
                 width={250} 
                 height={250}
@@ -120,10 +128,12 @@ const SWR = ({ albums }) => {
             <h2>Audio Embed</h2>
             <audio
                 controls
-                src="/../public/hey.wav">
+                src="/hey.wav">
                     Your browser does not support the
                     <code>audio</code> element.
             </audio>
+            <br></br>
+            <BoopButton />
             </div>
         </Layout>
         
