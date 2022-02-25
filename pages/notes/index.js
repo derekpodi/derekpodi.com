@@ -19,14 +19,14 @@ const Notes = () => {
                 <p>Add Article Section</p>
 
                 <br></br>
-
+                {/*
                 <p>Enter a Stock Ticker - returns investment bank grades tally</p>
                 <form action="/api/buy" >
                 <label htmlFor="name">Stock </label>
                     <input type="text" name="name" autoComplete="name" required/>
                     <input type="submit" value="Submit" />
                 </form>
-                
+                */}
             </div>
                         
             
