@@ -2750,6 +2750,14 @@ p.compact-line {
 color: #fff;
 }
 
+[data-theme='gray'] .btn {
+    color: #0000FF;
+  }
+
+[data-theme='gray'] .btn:hover {
+color: #fff;
+}
+
 .btn-sm {
     font-size: .8rem;
     height: 1.4rem;

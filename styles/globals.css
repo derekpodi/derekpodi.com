@@ -3775,3 +3775,22 @@ body {
 [data-theme='dark'] pre {
   background: #000;
 }
+
+
+[data-theme='gray'],
+[data-theme='gray'] html {
+  color: #ccc;
+  background: #222;
+}
+
+[data-theme='gray'] .navbar {
+  border-bottom: 1px solid #ccc;
+}
+
+[data-theme='gray'] a {
+  color: #FFCC66;
+}
+
+[data-theme='gray'] pre {
+  background: #222;
+}
