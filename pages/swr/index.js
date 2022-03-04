@@ -89,6 +89,7 @@ const SWR = ({ albums }) => {
                     return (
                         <li key={albums.id} className={styles.card}>
                             <a href="https://nextjs.org/learn">
+                                <br></br>
                                 <h3>{ albums.title }</h3>
                             </a>
                         </li>
