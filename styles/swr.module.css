@@ -56,3 +56,42 @@
   overflow: hidden;
 }
 
+
+/* CONTACT & MISC */
+
+.topanim, .topanim_contact, .topanim_misc {
+	width: 512px;
+	height: 256px;
+	background-size: cover;
+	margin:0 auto;
+	position: relative;
+	bottom:0;
+	left: 0;
+	right: 0;
+    -webkit-animation: topplay_contact 0.6s steps(4) infinite;
+    animation: topplay_contact 0.6s steps(4) infinite;
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+}
+
+.topanim{
+	background-image: url("../public/toddterje_cloud.png");
+  background-color: #0092ff;
+}
+
+
+@-webkit-keyframes topplay_contact {
+   from { background-position: 0px  0%;}
+     to { background-position: 0px 100%;}
+}
+@keyframes topplay_contact {
+   from { background-position: 0px 0%;}
+     to { background-position: 0px 100%;}
+}
+
+
+.element{
+  background-position-x: 0px;
+  background-position-y: 0px;
+
+}
