@@ -41,3 +41,18 @@
   top: 0;
   left: 0;
 }
+
+.scroll_sock{
+  background-image: url("../public/toddterje_scrollanimation.png");
+  background-color: #0092ff;
+}
+
+.scrollanimal{
+  width: 512px;
+  height: 256px;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: repeat;
+  overflow: hidden;
+}
+

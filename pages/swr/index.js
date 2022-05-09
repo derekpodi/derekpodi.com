@@ -7,9 +7,24 @@ import useSWR from 'swr'
 import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 
 import useSound from 'use-sound'
+import * as React from "react";
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
+class MyComponent extends React.Component {
+    handleScroll = e => {
+      let element = e.target
+      if (element.scrollHeight - element.scrollTop === element.clientHeight) {
+        // do something at end of scroll
+
+      }
+    }
+    render() {
+      return (
+        <div className={styles.scrollanimal + " " + styles.scroll_sock} style={{backgroundPosition: '0px ypos'}} onScroll={this.handleScroll}></div>
+        )
+    }
+  }
 
 
 function Profile () {
@@ -136,6 +151,10 @@ const SWR = ({ albums }) => {
             <br></br>
             <BoopButton />
             </div>
+            
+            <br></br>
+            <h2> Scroll Animation Test</h2>
+            <MyComponent />
         </Layout>
         
     );
