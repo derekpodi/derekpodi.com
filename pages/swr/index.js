@@ -44,7 +44,7 @@ class MyComponent extends React.Component {
     }
     render() {
       return (
-        <div className={styles.scrollanimal + " " + styles.scroll_sock} onScroll={this.handleScroll}></div>
+        <div className={styles.scrollanimal + " " + styles.scroll_sock}  onScroll={this.handleScroll}></div>
         )
     }
   }
@@ -182,6 +182,12 @@ const SWR = ({ albums }) => {
             <br></br>
             <h2>Animation Test</h2>
             <div className={styles.topanim}></div>
+            
+            <br></br>
+            <h2>Menu Test</h2>
+            <div id={styles.menucontact} className={styles.menulink} style={{border: '1px solid black'}}>
+                <div id={styles.menucontact_icon} style={{border: '1px solid black'}}></div>
+            </div>
         </Layout>
         
     );

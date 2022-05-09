@@ -95,3 +95,50 @@
   background-position-y: 0px;
 
 }
+
+/* MENU ANIMS */
+
+#menucontact_icon{
+	width:256px;
+	height: 128px;
+	margin: 0 auto;
+	margin-top: 10vh;
+	background-size: cover;
+}
+
+
+#menucontact_icon{
+	background-image: url("../public/toddterje_contact.png");
+}
+
+#menumusic:hover #menumusic_icon, #menumisc:hover #menumisc_icon, #menumisc_2:hover #menumisc_icon_2, #menustore:hover #menustore_icon, #menucontact:hover #menucontact_icon{
+	-webkit-animation: icon_hover 0.6s steps(9) both;
+    animation: icon_hover 0.6s steps(9) both;
+}
+
+@-webkit-keyframes icon_hover {
+   from { background-position: 0%   0%;}
+     to { background-position: 0% 100%;}
+}
+@keyframes icon_hover {
+   from { background-position: 0% 0%;}
+     to { background-position: 0% 100%;}
+}
+
+
+
+#skrekkogle_logo:hover{
+	-webkit-animation: skrekk_hover 0.6s steps(9) both;
+    animation: skrekk_hover 0.6s steps(9) both;
+}
+@-webkit-keyframes skrekk_hover {
+   from { background-position: 0px  0px;}
+     to { background-position: 0px -576px;}
+}
+@keyframes skrekk_hover {
+   from { background-position: 0px   0px;}
+     to { background-position: 0px -576px;}
+}
+
+
+/* MENU ANIMS SLUTT */
