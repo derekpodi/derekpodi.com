@@ -9,7 +9,14 @@ import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 import useSound from 'use-sound'
 import * as React from "react";
 
+
 const fetcher = (...args) => fetch(...args).then(res => res.json())
+
+var ScrollCount = 0;
+var retning=0;
+var prevRetning=0;
+var opp=0;
+var x1=0;
 
 class MyComponent extends React.Component {
     handleScroll = e => {
@@ -17,11 +24,27 @@ class MyComponent extends React.Component {
       if (element.scrollHeight - element.scrollTop === element.clientHeight) {
         // do something at end of scroll
 
+        if (ScrollCount == 5){
+            ScrollCount = 0;
+            retning= element.scrollTop;
+            
+            if (retning>prevRetning){
+            opp=opp+(256);
+            document.documentElement.style.setProperty('background-postion-y', opp + 'px');
+            }
+            else if (retning<prevRetning){
+            opp=opp-(256);
+            document.documentElement.style.setProperty('background-postion-y', opp + 'px');
+            }
+            prevRetning=retning;
+        }
+        ScrollCount++;
+       
       }
     }
     render() {
       return (
-        <div className={styles.scrollanimal + " " + styles.scroll_sock} style={{backgroundPosition: '0px ypos'}} onScroll={this.handleScroll}></div>
+        <div className={styles.scrollanimal + " " + styles.scroll_sock} onScroll={this.handleScroll}></div>
         )
     }
   }
@@ -155,6 +178,10 @@ const SWR = ({ albums }) => {
             <br></br>
             <h2> Scroll Animation Test</h2>
             <MyComponent />
+            
+            <br></br>
+            <h2>Animation Test</h2>
+            <div className={styles.topanim}></div>
         </Layout>
         
     );
