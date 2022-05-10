@@ -18,6 +18,12 @@ var prevRetning=0;
 var opp=0;
 var x1=0;
 
+//https://stackoverflow.com/questions/71729526/react-not-recognizing-onscroll-event
+//https://codepen.io/JohnReynolds57/pen/NLNOyO?editors=0011
+//https://kempsterrrr.xyz/articles/handling-scroll-events-in-react
+//https://github.com/vercel/next.js/issues/6132
+//https://www.toddterje.com/
+
 class MyComponent extends React.Component {
     handleScroll = e => {
       let element = e.target
@@ -30,11 +36,11 @@ class MyComponent extends React.Component {
             
             if (retning>prevRetning){
             opp=opp+(256);
-            document.documentElement.style.setProperty('background-postion-y', opp + 'px');
+            document.documentElement.style.setProperty('background-postion', x1 + 'px' + opp + 'px');
             }
             else if (retning<prevRetning){
             opp=opp-(256);
-            document.documentElement.style.setProperty('background-postion-y', opp + 'px');
+            document.documentElement.style.setProperty('background-postion', x1 + 'px' + opp + 'px');
             }
             prevRetning=retning;
         }
@@ -44,7 +50,7 @@ class MyComponent extends React.Component {
     }
     render() {
       return (
-        <div className={styles.scrollanimal + " " + styles.scroll_sock}  onScroll={this.handleScroll}></div>
+        <div className={styles.scrollanimal + " " + styles.scroll_sock} onScroll={this.handleScroll}></div>
         )
     }
   }
@@ -180,25 +186,26 @@ const SWR = ({ albums }) => {
             <MyComponent />
             
             <br></br>
-            <h2>Animation Test</h2>
+            <h2>Static Animation Test</h2>
             <div className={styles.topanim}></div>
             
             <br></br>
-            <h2>Menu Test</h2>
+            <h2>Animated Menu Test</h2>
             <div id={styles.indexmenu} className={styles.menu} style={{border: '1px solid black'}}>
-                <a id={styles.menucontact} className={styles.menulink} href="">
-                    <div id={styles.menucontact_icon} style={{border: '1px solid black'}}></div>
+                <a id={styles.menucontact} className={styles.menulink} href="swr/contact">
+                    <div id={styles.menucontact_icon} style={{border: '0px solid black'}}></div>
                 </a>
-                <a id={styles.menustore} className={styles.menulink} href="">
-                    <div id={styles.menustore_icon} style={{border: '1px solid black'}}></div>
+                <a id={styles.menustore} className={styles.menulink} href="swr/shop">
+                    <div id={styles.menustore_icon} style={{border: '0px solid black'}}></div>
                 </a>
-                <a id={styles.menumisc} className={styles.menulink}  href="">
-                    <div id={styles.menumisc_icon} style={{border: '1px solid black'}}></div>
+                <a id={styles.menumisc} className={styles.menulink}  href="swr/stuff">
+                    <div id={styles.menumisc_icon} style={{border: '0px solid black'}}></div>
                 </a>
-                <a id={styles.menumusic} className={styles.menulink}  href="">
-                    <div id={styles.menumusic_icon} style={{border: '1px solid black'}}></div>
+                <a id={styles.menumusic} className={styles.menulink}  href="swr/music">
+                    <div id={styles.menumusic_icon} style={{border: '0px solid black'}}></div>
                 </a>
             </div>
+
         </Layout>
         
     );

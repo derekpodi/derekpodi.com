@@ -91,9 +91,7 @@
 
 
 .element{
-  background-position-x: 0px;
-  background-position-y: 0px;
-
+  background-position: 0px 0px;
 }
 
 /* MENU ANIMS */
@@ -167,6 +165,7 @@
 	width: 25%;
 	float:left;
 	height: 20vh;
+  background-color: #FFBE00;
 }
 
 #menumusic_icon, #menumisc_icon, #menumisc_icon_2, #menustore_icon, #menucontact_icon, #skrekkogle_logo {
@@ -174,6 +173,7 @@
 	margin-top: 5vh;
 	margin-bottom: 5vh;
 	background-size: cover;
+  background-color: #FFBE00;
 }
 
 #menumusic_icon, #menumisc_icon, #menumisc_icon_2, #menustore_icon, #menucontact_icon, #skrekkogle_logo {
