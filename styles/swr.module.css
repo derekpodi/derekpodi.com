@@ -98,7 +98,7 @@
 
 /* MENU ANIMS */
 
-#menucontact_icon{
+#menumusic_icon, #menumisc_icon, #menumisc_icon_2, #menustore_icon, #menucontact_icon, #skrekkogle_logo{
 	width:256px;
 	height: 128px;
 	margin: 0 auto;
@@ -106,7 +106,18 @@
 	background-size: cover;
 }
 
-
+#menumusic_icon{
+	background-image: url("../public/toddterje_music.png");
+}
+#menumisc_icon{
+	background-image: url("../public/toddterje_stuff.png");
+}
+#menumisc_icon_2{
+	background-image: url("../public/toddterje_stuff.png");
+}
+#menustore_icon{
+	background-image: url("../public/toddterje_shop.png");
+}
 #menucontact_icon{
 	background-image: url("../public/toddterje_contact.png");
 }
@@ -142,3 +153,30 @@
 
 
 /* MENU ANIMS SLUTT */
+.menu {
+	width: 100%;
+}
+
+.menu::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.menulink{
+	width: 25%;
+	float:left;
+	height: 20vh;
+}
+
+#menumusic_icon, #menumisc_icon, #menumisc_icon_2, #menustore_icon, #menucontact_icon, #skrekkogle_logo {
+	margin: 0 auto;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	background-size: cover;
+}
+
+#menumusic_icon, #menumisc_icon, #menumisc_icon_2, #menustore_icon, #menucontact_icon, #skrekkogle_logo {
+	width: 192px;
+	height: 96px !important;
+}

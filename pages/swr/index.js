@@ -185,8 +185,19 @@ const SWR = ({ albums }) => {
             
             <br></br>
             <h2>Menu Test</h2>
-            <div id={styles.menucontact} className={styles.menulink} style={{border: '1px solid black'}}>
-                <div id={styles.menucontact_icon} style={{border: '1px solid black'}}></div>
+            <div id={styles.indexmenu} className={styles.menu} style={{border: '1px solid black'}}>
+                <a id={styles.menucontact} className={styles.menulink} href="">
+                    <div id={styles.menucontact_icon} style={{border: '1px solid black'}}></div>
+                </a>
+                <a id={styles.menustore} className={styles.menulink} href="">
+                    <div id={styles.menustore_icon} style={{border: '1px solid black'}}></div>
+                </a>
+                <a id={styles.menumisc} className={styles.menulink}  href="">
+                    <div id={styles.menumisc_icon} style={{border: '1px solid black'}}></div>
+                </a>
+                <a id={styles.menumusic} className={styles.menulink}  href="">
+                    <div id={styles.menumusic_icon} style={{border: '1px solid black'}}></div>
+                </a>
             </div>
         </Layout>
         
