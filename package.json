@@ -12,6 +12,7 @@
     "@markdoc/next.js": "^0.1.2",
     "@react-three/drei": "^7.22.6",
     "@react-three/fiber": "^7.0.19",
+    "automerge": "^1.0.1-preview.7",
     "date-fns": "^2.23.0",
     "gray-matter": "^4.0.3",
     "next": "^12.0.9",

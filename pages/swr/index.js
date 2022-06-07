@@ -10,7 +10,9 @@ import useSound from 'use-sound'
 import * as React from "react";
 
 
+
 const fetcher = (...args) => fetch(...args).then(res => res.json())
+
 
 var ScrollCount = 0;
 var retning=0;
@@ -23,6 +25,8 @@ var x1=0;
 //https://kempsterrrr.xyz/articles/handling-scroll-events-in-react
 //https://github.com/vercel/next.js/issues/6132
 //https://www.toddterje.com/
+
+//https://github.com/vercel/next.js/issues/6132
 
 class MyComponent extends React.Component {
     handleScroll = e => {
@@ -184,6 +188,7 @@ const SWR = ({ albums }) => {
             <br></br>
             <h2> Scroll Animation Test</h2>
             <MyComponent />
+            <handleScroll />
             
             <br></br>
             <h2>Static Animation Test</h2>
