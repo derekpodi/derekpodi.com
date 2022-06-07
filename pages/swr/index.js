@@ -214,8 +214,8 @@ const SWR = ({ albums }) => {
 
             <br />
 
+            <h2> Typewriter Animation Test</h2>
             <div>
-                <h2> Typewriter Animation Test</h2>
                 <Typewriter />
             </div>
 
