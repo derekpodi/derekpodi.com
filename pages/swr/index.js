@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import useSWR from 'swr'
 import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
+import Typewriter from '../../components/typewriter'
 
 import useSound from 'use-sound'
 import * as React from "react";
@@ -209,6 +210,13 @@ const SWR = ({ albums }) => {
                 <a id={styles.menumusic} className={styles.menulink}  href="swr/music">
                     <div id={styles.menumusic_icon} style={{border: '0px solid black'}}></div>
                 </a>
+            </div>
+
+            <br />
+
+            <div>
+                <h2> Typewriter Animation Test</h2>
+                <Typewriter />
             </div>
 
         </Layout>
