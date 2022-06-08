@@ -9,7 +9,16 @@ import Typewriter from '../../components/typewriter'
 
 import useSound from 'use-sound'
 import * as React from "react";
-
+import {UnControlled as CodeMirror} from 'react-codemirror2-react-17'
+require('codemirror/lib/codemirror.css');
+require('codemirror/theme/material.css');
+require('codemirror/theme/neat.css');
+if (typeof navigator !== 'undefined') {
+    require('codemirror/mode/xml/xml');
+    require('codemirror/mode/javascript/javascript');
+    require('codemirror/mode/python/python');
+    // [...]
+  }
 
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
@@ -115,7 +124,13 @@ const SWR = ({ albums }) => {
       
         return <button onClick={play}>Hey!</button>
     }
-    
+    const value = 
+`import math
+
+x = math.pi
+
+print(x)`
+
     return (
         <Layout SWR>
             <p>
@@ -217,6 +232,23 @@ const SWR = ({ albums }) => {
             <div>
                 <Typewriter />
             </div>
+            
+            <br />
+            <h2> Codemirror </h2>
+            <div>
+                <CodeMirror 
+                    value={value}
+                   
+                    options={{
+                        mode: 'html',
+                        theme: 'material',  //xg-light
+                        lineNumbers: true
+                    }}
+                    onChange={(editor, data, value) => {
+                    }}
+                /> 
+            </div>
+
 
         </Layout>
         
