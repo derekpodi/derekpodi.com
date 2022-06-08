@@ -12,7 +12,7 @@ const Footer = () => {
                 ) : (
                 <>
                     <small>
-                         © Copyright 2021, Derek.
+                         © Copyright 2021-22, Derek.
                     </small>
                 </>
                 )}
