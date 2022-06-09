@@ -6,6 +6,7 @@ import Image from 'next/image'
 import useSWR from 'swr'
 import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 import Typewriter from '../../components/typewriter'
+import Script from 'next/script'
 
 import useSound from 'use-sound'
 import * as React from "react";
@@ -248,7 +249,6 @@ print(x)`
                     }}
                 /> 
             </div>
-
 
         </Layout>
         
