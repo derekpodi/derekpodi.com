@@ -249,6 +249,16 @@ print(x)`
                     }}
                 /> 
             </div>
+            
+            <br />
+            <h2> JupyterLite</h2>
+            <div>
+                <iframe
+                    src="https://jupyterlite.github.io/demo/repl/index.html?kernel=python&toolbar=1&theme=JupyterLab Dark&code=import math&code=x = math.pi&code=print(x)"
+                    width="100%"
+                    height="500px"
+                ></iframe>
+            </div>
 
         </Layout>
         
