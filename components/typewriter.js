@@ -124,6 +124,29 @@ export default function Typewriter() {
       </span>
       <style jsx>
         {`
+          .jumbo {
+            font-family: var(--serif);
+            letter-spacing: -0.01em;
+            font-weight: 400;
+          }
+          
+          h1.jumbo {
+            font-size: 59px;
+            line-height: 70px;
+          }
+          
+          h2.jumbo {
+            font-size: 72px;
+            line-height: 84px;
+            margin-top: 0;
+            padding-bottom: 1.5rem;
+          }
+          
+          h3.jumbo {
+            font-size: 43px;
+            line-height: 52px;
+          }
+
           .prefers-no-animation {
             display: none;
           }
