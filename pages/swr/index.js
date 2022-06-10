@@ -9,17 +9,7 @@ import Typewriter from '../../components/typewriter'
 import Script from 'next/script'
 
 import useSound from 'use-sound'
-import * as React from "react";
-import {UnControlled as CodeMirror} from 'react-codemirror2-react-17'
-require('codemirror/lib/codemirror.css');
-require('codemirror/theme/material.css');
-require('codemirror/theme/neat.css');
-if (typeof navigator !== 'undefined') {
-    require('codemirror/mode/xml/xml');
-    require('codemirror/mode/javascript/javascript');
-    require('codemirror/mode/python/python');
-    // [...]
-  }
+import * as React from "react"
 
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
@@ -125,12 +115,6 @@ const SWR = ({ albums }) => {
       
         return <button onClick={play}>Hey!</button>
     }
-    const value = 
-`import math
-
-x = math.pi
-
-print(x)`
 
     return (
         <Layout SWR>
@@ -234,32 +218,6 @@ print(x)`
                 <Typewriter />
             </div>
             
-            <br />
-            <h2> Codemirror </h2>
-            <div>
-                <CodeMirror 
-                    value={value}
-                   
-                    options={{
-                        mode: 'html',
-                        theme: 'material',  //xg-light
-                        lineNumbers: true
-                    }}
-                    onChange={(editor, data, value) => {
-                    }}
-                /> 
-            </div>
-            
-            <br />
-            <h2> JupyterLite</h2>
-            <div>
-                <iframe
-                    src="https://jupyterlite.github.io/demo/repl/index.html?kernel=python&toolbar=1&theme=JupyterLab Dark&code=import math&code=x = math.pi&code=print(x)"
-                    width="100%"
-                    height="500px"
-                ></iframe>
-            </div>
-
         </Layout>
         
     );

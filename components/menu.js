@@ -51,6 +51,9 @@ const Menu = () => {
                     <Link href="/3d"><a >3D</a></Link>
                 </li>
                 <li>
+                    <Link href="/repl"><a >REPL</a></Link>
+                </li>
+                <li>
                     <Link href="/swr"><a >SWR</a></Link>
                 </li>
                 <li>
