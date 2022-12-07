@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Date from '../components/date'
 import Image from 'next/image'
 import ThemeChanger from '../components/color'
+import Typewriter from '../components/typewriter'
 
 
 export async function getStaticProps() {
@@ -25,7 +26,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       
-
+    
       {/*TODO: ADD/Fix Landing Page
 
       <section className={utilStyles.headingMd}>
