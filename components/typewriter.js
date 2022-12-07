@@ -87,6 +87,9 @@ function Type({ text, onEnd }) {
 const text =
   'Markdoc is a powerful, flexible, Markdown-based authoring framework.';
 
+//const text =
+//  'Testing, Testing, 1, 2, 3.';
+
 export default function Typewriter() {
   const [state, setState] = React.useState(0);
   const [done, setDone] = React.useState(false);
