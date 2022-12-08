@@ -90,7 +90,7 @@ const text =
 //const text =
 //  'Testing, Testing, 1, 2, 3.';
 
-export default function Typewriter() {
+function Typewriter() {
   const [state, setState] = React.useState(0);
   const [done, setDone] = React.useState(false);
 
@@ -117,6 +117,107 @@ export default function Typewriter() {
             <Swapper
               before="{% toolchain %}"
               after="authoring framework."
+              onEnd={setDone}
+            />
+          </>
+        )}
+        <span className="cursor-container">
+          <div className="cursor" />
+        </span>
+      </span>
+      <style jsx>
+        {`
+          .jumbo {
+            font-family: var(--serif);
+            letter-spacing: -0.01em;
+            font-weight: 400;
+          }
+          
+          h1.jumbo {
+            font-size: 59px;
+            line-height: 70px;
+          }
+          
+          h2.jumbo {
+            font-size: 72px;
+            line-height: 84px;
+            margin-top: 0;
+            padding-bottom: 1.5rem;
+          }
+          
+          h3.jumbo {
+            font-size: 43px;
+            line-height: 52px;
+          }
+
+          .prefers-no-animation {
+            display: none;
+          }
+          h1 {
+            // Prevent page jump
+            height: calc(var(--line-height-jumbo) * 3);
+            overflow: hidden;
+          }
+          .cursor-container {
+            position: relative;
+            display: inline-block;
+          }
+          .cursor {
+            position: absolute;
+            display: inline-block;
+            top: -0.82em;
+            left: 12px;
+            width: 8px;
+            height: 0.96em;
+            background: var(--theme);
+            ${done ? 'display: none;' : ''}
+          }
+          @media screen and (max-width: 660px) {
+            h1 {
+              height: unset;
+              overflow: initial;
+            }
+            .prefers-animation {
+              display: none;
+            }
+            .prefers-no-animation {
+              display: inline;
+            }
+          }
+        `}
+      </style>
+    </h1>
+  );
+}
+
+
+export default function Typewriter2() {
+  const [state, setState] = React.useState(0);
+  const [done, setDone] = React.useState(false);
+
+  const next = React.useCallback(() => setState((s) => s + 1), []);
+
+  return (
+    <h1 className="jumbo" aria-label={text}>
+      <span className="prefers-no-animation">{text}</span>
+      <span aria-hidden="true" className="prefers-animation">
+        <Swapper before="# Hello" after="Hello!" onEnd={next} />
+        {state >= 1 && <Type text="" onEnd={next} />}
+        {state >= 2 && (
+          <Swapper before="{% website %}" after="Welcome," onEnd={next} />
+        )}
+        {state >= 3 && (
+          <>
+            <br />
+            <Type text=" This is my homepage. " onEnd={next} />
+          </>
+        )}
+        {state >= 4 && (
+          <>
+            <br />
+            <Swapper
+              before="{% explore %}"
+              after="Feel free to look around."
               onEnd={setDone}
             />
           </>
