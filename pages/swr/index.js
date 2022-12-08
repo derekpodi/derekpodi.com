@@ -6,6 +6,7 @@ import Image from 'next/image'
 import useSWR from 'swr'
 import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 import Typewriter from '../../components/typewriter'
+import Typewriter2 from '../../components/typewriter'
 import Script from 'next/script'
 
 import useSound from 'use-sound'
@@ -215,7 +216,7 @@ const SWR = ({ albums }) => {
             <br />
             <h2> Typewriter - Marcdoc Animation Test</h2>
             <div>
-                <Typewriter />
+                <Typewriter2 />
             </div>
             
         </Layout>
