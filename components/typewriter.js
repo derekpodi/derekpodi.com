@@ -202,7 +202,7 @@ export default function Typewriter2() {
       <span className="prefers-no-animation">{text}</span>
       <span aria-hidden="true" className="prefers-animation">
         <Swapper before="# Hello" after="Hello!" onEnd={next} />
-        {state >= 1 && <Type text="" onEnd={next} />}
+        {state >= 1 && (<><br /> <Type text=" " onEnd={next} /></>)}
         {state >= 2 && (
           <Swapper before="{% website %}" after="Welcome," onEnd={next} />
         )}
