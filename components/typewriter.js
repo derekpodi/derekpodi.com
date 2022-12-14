@@ -202,9 +202,9 @@ export default function Typewriter2() {
       <span className="prefers-no-animation">{text}</span>
       <span aria-hidden="true" className="prefers-animation">
         <Swapper before="# Hello" after="Hello!" onEnd={next} />
-        {state >= 1 && (<><br /> <Type text=" " onEnd={next} /></>)}
+        {state >= 1 && (<><br /> <Type text="You " onEnd={next} /></>)}
         {state >= 2 && (
-          <Swapper before="{% website %}" after="Welcome," onEnd={next} />
+          <Swapper before="{% welcome %}" after="landed on my site, Welcome!" onEnd={next} />
         )}
         {state >= 3 && (
           <>
@@ -235,8 +235,8 @@ export default function Typewriter2() {
           }
           
           h1.jumbo {
-            font-size: 59px;
-            line-height: 70px;
+            font-size: 50px;
+            line-height: 60px;
           }
           
           h2.jumbo {
