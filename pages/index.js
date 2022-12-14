@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Date from '../components/date'
 import Image from 'next/image'
 import ThemeChanger from '../components/color'
-import Typewriter from '../components/typewriter'
+import Typewriter2 from '../components/typewriter'
 
 
 export async function getStaticProps() {
@@ -26,7 +26,14 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       
-    
+
+      {/* ADD Typewriter 2 functionality -- Start w/ a verb and use 'you' to draw in visitors 
+      <div>
+        <Typewriter2 />
+      </div>
+      */}
+      
+
       {/*TODO: ADD/Fix Landing Page
 
       <section className={utilStyles.headingMd}>
