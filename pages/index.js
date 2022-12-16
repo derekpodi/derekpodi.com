@@ -27,12 +27,13 @@ export default function Home({ allPostsData }) {
       </Head>
       
 
-      {/* ADD Typewriter 2 functionality -- Start w/ a verb and use 'you' to draw in visitors 
+      {/* ADD Typewriter 2 functionality -- Start w/ a verb and use 'you' to draw in visitors  */}
+
+      {/*
       <div>
         <Typewriter2 />
       </div>
-      */}
-      
+       */}
 
       {/*TODO: ADD/Fix Landing Page
 
