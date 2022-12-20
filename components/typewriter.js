@@ -1,7 +1,7 @@
 import React from 'react';
 
-const TYPE_DURATION = 45;
-const SWAP_DURATION = 475;
+const TYPE_DURATION = 35;
+const SWAP_DURATION = 450;
 const SWAP_DELAY = 150;
 const SWAP_FUNCTION = 'cubic-bezier(0.75, 0, 0.25, 1)';
 
@@ -85,7 +85,7 @@ function Type({ text, onEnd }) {
 }
 
 const text =
-  'Markdoc is a powerful, flexible, Markdown-based authoring framework.';
+  'Hello! You landed on my site, Welcome! This is my homepage. Feel free to look around.';
 
 //const text =
 //  'Testing, Testing, 1, 2, 3.';
