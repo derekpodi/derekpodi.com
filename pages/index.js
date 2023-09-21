@@ -8,6 +8,7 @@ import Image from 'next/image'
 import ThemeChanger from '../components/color'
 import Typewriter2 from '../components/typewriter'
 import styles from '../styles/swr.module.css'
+import { Analytics } from '@vercel/analytics/react';
 
 
 export async function getStaticProps() {
@@ -30,11 +31,16 @@ export default function Home({ allPostsData }) {
 
       {/* ADD Typewriter 2 functionality -- Start w/ a verb and use 'you' to draw in visitors  */}
 
-      
+      {/*
       <div>
-        <Typewriter2 />
+         <Typewriter2 /> 
       </div>
-       
+      */}
+
+      <body>
+        <Analytics />
+      </body>
+
 
       {/*TODO: ADD/Fix Landing Page
 

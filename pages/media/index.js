@@ -22,11 +22,11 @@ const Media = ({ users }) => {
                 <br />
                 <p>External API testing with dynamic pages: <a href="https://jsonplaceholder.typicode.com/"> JSON SRC</a></p>
                 {users.map(users => (
-                    <Link href={'/media/' + users.id} key={users.id}>
-                        <a>
-                            <p>{ users.name }</p>
-                        </a>
-                    </Link>
+                    (<Link href={'/media/' + users.id} key={users.id}>
+
+                        <p>{ users.name }</p>
+
+                    </Link>)
                 ))}
             </div>
         </Layout>

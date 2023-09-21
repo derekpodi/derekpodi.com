@@ -26,7 +26,7 @@ export function TableOfContents({ toc }) {
                   .filter(Boolean)
                   .join(' ')}
               >
-                <Link href={href} passHref>
+                <Link href={href} passHref legacyBehavior>
                   <a>{item.title}</a>
                 </Link>
               </li>

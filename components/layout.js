@@ -4,13 +4,17 @@ import Link from 'next/link'
 import Navbar from './navbar'
 import Menu from './menu'
 import Footer from './footer'
+import dynamic from "next/dynamic"
 
 const name = 'Derek '
 export const siteTitle = 'Derek Podimatis'
 
+const Nav = dynamic(() => import("./navbar"), { ssr: false });
+const Men = dynamic(() => import("./menu"), { ssr: false });
+
+
 export default function Layout({ children, home }) {
   return (
-    <html lang="en">
 
       <div className={utilStyles.container}>
         
@@ -31,10 +35,10 @@ export default function Layout({ children, home }) {
         </Head>
 
 
-        <Navbar />
+        <Nav />
 
 
-        <Menu />
+        <Men />
         
 
         <main className={utilStyles.mh3}>{children}</main>
@@ -43,8 +47,10 @@ export default function Layout({ children, home }) {
         <footer className={`${utilStyles.mh3} ${utilStyles.mt4}`}>
           {!home && (
             <div className={utilStyles.backToHome}>
-              <Link href="/">
-                <a className={utilStyles["top-2"] + " " + utilStyles["btn"]+ " " + utilStyles["btn-sm"] + " " + utilStyles["bg-dark-green"] + " " + utilStyles["white"] + " " + utilStyles["hover-white"]+ " " + utilStyles["hover-bg-black"]}>← Back to home</a>
+              <Link
+                href="/"
+                className={utilStyles["top-2"] + " " + utilStyles["btn"]+ " " + utilStyles["btn-sm"] + " " + utilStyles["bg-dark-green"] + " " + utilStyles["white"] + " " + utilStyles["hover-white"]+ " " + utilStyles["hover-bg-black"]}>
+                ← Back to home
               </Link>
             </div>
           )}
@@ -54,8 +60,7 @@ export default function Layout({ children, home }) {
         </footer>
 
       </div>
-    </html>
-  )
+  );
 }
 
 
