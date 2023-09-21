@@ -25,15 +25,16 @@ const BoxIndex = () => {
             </div>
             <footer className={`${utilStyles.mh3} ${utilStyles.mt4}`}>
                 <div className="flex-centered">
-                <Link href="/3d">
-                    <a className={utilStyles["top-2"] + " " + utilStyles["btn"]+ " " + utilStyles["btn-sm"] + " " + utilStyles["bg-dark-green"] + " " + utilStyles["white"] + " " + utilStyles["hover-white"]+ " " + utilStyles["hover-bg-black"]}>← Back to 3D</a>
+                <Link
+                    href="/3d"
+                    className={utilStyles["top-2"] + " " + utilStyles["btn"]+ " " + utilStyles["btn-sm"] + " " + utilStyles["bg-dark-green"] + " " + utilStyles["white"] + " " + utilStyles["hover-white"]+ " " + utilStyles["hover-bg-black"]}>
+                    ← Back to 3D
                 </Link>
                 </div>
                 <div className={utilStyles.mt3}></div>
                 <div className={utilStyles["bottom-2"]}></div>
             </footer>
         </Layout>
-        
     );
 }
 

@@ -6,7 +6,7 @@ import utilStyles from '../styles/utils.module.css'
 const Navbar = () => {
     const router = useRouter()
     const name = 'Derek Podimatis'
-    return(
+    return (
         <header className={utilStyles["container"] + " " + utilStyles["bottom-6"]}>
             <div className={utilStyles["columns"]}>
                 <div className={utilStyles["column"]}>
@@ -21,8 +21,8 @@ const Navbar = () => {
                             ) : (
                             <>
                                 <h2 className={utilStyles.headingLg}>
-                                <Link href="/">
-                                    <a className={utilStyles.colorInherit}>{name}</a>
+                                <Link href="/" className={utilStyles.colorInherit}>
+                                    {name}
                                 </Link>
                                 </h2>
                             </>
@@ -33,9 +33,9 @@ const Navbar = () => {
                         <div className="navbar-section">
                             <h1>
                                 <span className="h1-normal">
-                                    ~ / 
-                                    <Link href="/">
-                                    <a title="Home"> Home </a>
+                                    ~ /  
+                                    <Link href="/" title="Home">
+                                    Home 
                                     </Link>
                                     {router.pathname =='/' ? (
                                         <>
@@ -53,7 +53,6 @@ const Navbar = () => {
                 </div>
             </div>
         </header>
-        
     );
 }
 

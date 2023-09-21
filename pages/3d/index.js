@@ -11,19 +11,19 @@ const Three = () => {
                 <br/>
                 <h2>
                     <Link href="/3d/sphere">
-                        <a>-Sphere</a>
+                        -Sphere
                     </Link>
                 <br/><br/>
                     <Link href="/3d/box">
-                        <a>-Box</a>
+                        -Box
                     </Link>
                 <br/><br/>
                     <Link href="/3d/scroll">
-                        <a>-Scroll</a>
+                        -Scroll
                     </Link>
                 <br/><br/>
                     <Link href="/3d/sandbox">
-                        <a>-Sandbox</a>
+                        -Sandbox
                     </Link>
                 <br/><br/>
 
@@ -37,7 +37,6 @@ const Three = () => {
                 </p>
             </div>
         </Layout>
-        
     );
 }
 

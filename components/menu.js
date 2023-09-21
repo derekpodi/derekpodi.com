@@ -10,8 +10,7 @@ const Menu = () => {
     const router = useRouter()
     const name = 'Derek'
     
-    return(
-        
+    return (
         <div className={`${utilStyles.menu} ${utilStyles.pa3} ${utilStyles.ma4}`}>
             <span className={utilStyles.title}>
             {router.pathname =='/' ? (
@@ -21,8 +20,8 @@ const Menu = () => {
                 ) : (
                 <>
                     
-                    <Link href="/">
-                        <a className={utilStyles.colorInherit}>Home</a>
+                    <Link href="/" className={utilStyles.colorInherit}>
+                        Home
                     </Link>
                     
                 </>
@@ -30,40 +29,40 @@ const Menu = () => {
             </span>
             <ul className={utilStyles.ul}>
                 <li>
-                    <Link href="/about"><a >About</a></Link>
+                    <Link href="/about">About</Link>
                 </li>
                 <li>
-                    <Link href="/posts"><a >Blog</a></Link>
+                    <Link href="/posts">Blog</Link>
                 </li>
                 <li>
-                    <Link href="/notes"><a >Notes</a></Link>
+                    <Link href="/notes">Notes</Link>
                 </li>
                 <li>
-                    <Link href="/photos"><a >Photos</a></Link>
+                    <Link href="/photos">Photos</Link>
                 </li>
                 <li>
-                    <Link href="/media"><a >Media</a></Link>
+                    <Link href="/media">Media</Link>
                 </li>
                 <li>
-                    <Link href="/dna"><a >DNA</a></Link>
+                    <Link href="/dna">DNA</Link>
                 </li>
                 <li>
-                    <Link href="/3d"><a >3D</a></Link>
+                    <Link href="/3d">3D</Link>
                 </li>
                 <li>
-                    <Link href="/repl"><a >REPL</a></Link>
+                    <Link href="/repl">REPL</Link>
                 </li>
                 <li>
-                    <Link href="/swr"><a >SWR</a></Link>
+                    <Link href="/swr">SWR</Link>
                 </li>
                 <li>
-                    <Link href="/api/date"><a >Date</a></Link>
+                    <Link href="/api/date">Date</Link>
                 </li>
                 <li>
                     <ThemeChanger />
                 </li>
             </ul>
         </div>
-    )
+    );
 }
 export default Menu;

@@ -34,7 +34,7 @@ export const getStaticProps = async (context) => {
 
 
 const Details  = ({ user }) => {
-    return(
+    return (
         <Layout>
             <div>
                 <h3>{ user.name }</h3>
@@ -44,8 +44,10 @@ const Details  = ({ user }) => {
             </div>
             <footer className={`${utilStyles.mt4}`}>
                 <div className="flex-left">
-                <Link href="/media">
-                    <a className={utilStyles["top-2"] + " " + utilStyles["btn"]+ " " + utilStyles["btn-sm"] + " " + utilStyles["bg-dark-green"] + " " + utilStyles["white"] + " " + utilStyles["hover-white"]+ " " + utilStyles["hover-bg-black"]}>← Back to media</a>
+                <Link
+                    href="/media"
+                    className={utilStyles["top-2"] + " " + utilStyles["btn"]+ " " + utilStyles["btn-sm"] + " " + utilStyles["bg-dark-green"] + " " + utilStyles["white"] + " " + utilStyles["hover-white"]+ " " + utilStyles["hover-bg-black"]}>
+                    ← Back to media
                 </Link>
                 </div>
                 <div className={utilStyles.mt3}></div>

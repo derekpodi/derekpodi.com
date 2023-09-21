@@ -224,7 +224,7 @@ const Index = () => {
         <div className="label-container">
           <p className="label">
             <Link href="/3d">
-                    <a>← Back to 3D</a>
+                    ← Back to 3D
             </Link>
           </p>
         </div>
